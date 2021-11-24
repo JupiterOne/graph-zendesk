@@ -62,6 +62,7 @@ describe('#fetchTickets', () => {
           _type: { const: Entities.TICKET._type },
           _class: { const: Entities.TICKET._class },
           _key: { type: 'string' },
+          active: { type: 'boolean' },
           assigneeEmail: { type: 'string' },
           assigneeId: { type: 'number' },
           brandId: { type: 'number' },
@@ -86,6 +87,8 @@ describe('#fetchTickets', () => {
           submitterId: { type: 'number' },
           type: { type: 'string' },
           url: { type: 'string' },
+          queries: { type: 'array', items: { type: 'string' } },
+          tags: { type: 'array', items: { type: 'string' } },
         },
       },
     });

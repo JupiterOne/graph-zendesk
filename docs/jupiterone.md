@@ -98,7 +98,7 @@ The following entities are created:
 | Account      | `zendesk_account`      | `User`          |
 | Group        | `zendesk_group`        | `Group`         |
 | Organization | `zendesk_organization` | `Organization`  |
-| Ticket       | `zendesk_ticket`       | `Question`      |
+| Ticket       | `zendesk_ticket`       | `Record`        |
 | User         | `zendesk_user`         | `User`          |
 
 ### Relationships

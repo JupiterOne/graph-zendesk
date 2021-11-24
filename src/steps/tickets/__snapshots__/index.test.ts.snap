@@ -184,7 +184,7 @@ Object {
     },
     Object {
       "_class": Array [
-        "Question",
+        "Record",
       ],
       "_key": "zendesk_ticket:1",
       "_rawData": Array [
@@ -324,7 +324,7 @@ Object {
   "collectedEntities": Array [
     Object {
       "_class": Array [
-        "Question",
+        "Record",
       ],
       "_key": "zendesk_ticket:1",
       "_rawData": Array [
@@ -674,7 +674,7 @@ Object {
     },
     Object {
       "_class": Array [
-        "Question",
+        "Record",
       ],
       "_key": "zendesk_ticket:1",
       "_rawData": Array [
@@ -814,7 +814,7 @@ Object {
   "collectedEntities": Array [
     Object {
       "_class": Array [
-        "Question",
+        "Record",
       ],
       "_key": "zendesk_ticket:1",
       "_rawData": Array [

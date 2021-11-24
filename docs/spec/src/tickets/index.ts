@@ -17,7 +17,7 @@ export const ticketSpec: StepSpec<IntegrationConfig>[] = [
       {
         resourceName: 'Ticket',
         _type: 'zendesk_ticket',
-        _class: ['Question'],
+        _class: ['Record'],
       },
     ],
     relationships: [],

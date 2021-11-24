@@ -42,7 +42,7 @@ export const Entities: Record<
   TICKET: {
     resourceName: 'Ticket',
     _type: 'zendesk_ticket',
-    _class: ['Question'],
+    _class: ['Record'],
   },
   ACCOUNT: {
     resourceName: 'Account',
