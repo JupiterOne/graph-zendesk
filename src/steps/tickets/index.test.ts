@@ -14,6 +14,7 @@ import { IntegrationConfig } from '../../config';
 import { Entities, Relationships } from '../constants';
 import { fetchGroups } from '../groups';
 import { fetchUsers } from '../users';
+import { mapTypeToClass } from './converters';
 
 describe('#fetchTickets', () => {
   let recording: Recording;
@@ -49,8 +50,18 @@ describe('#fetchTickets', () => {
     }).toMatchSnapshot();
 
     expect(tickets.length).toBeGreaterThan(0);
-    expect(tickets).toMatchGraphObjectSchema({
-      _class: Entities.TICKET._class,
+
+    // The _class is dynamic so we need to process it
+    const ticketExampleClasses = [Entities.TICKET._class[0]];
+    const ticketExampleAdditionalClass = mapTypeToClass(
+      tickets[0].type as string,
+    );
+    if (ticketExampleAdditionalClass) {
+      ticketExampleClasses.push(ticketExampleAdditionalClass);
+    }
+
+    expect(tickets[0]).toMatchGraphObjectSchema({
+      _class: ticketExampleClasses,
       schema: {
         additionalProperties: false,
         required: [],

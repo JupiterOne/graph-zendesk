@@ -9,13 +9,37 @@ function getTicketKey(id: string): string {
   return `zendesk_ticket:${id}`;
 }
 
+export function mapTypeToClass(
+  ticketType?: string,
+): 'Task' | 'Question' | undefined {
+  if (!ticketType || ['incident', 'problem'].includes(ticketType)) {
+    return undefined;
+  }
+
+  // A simple uppercased chart at position 0 would have worked
+  // This just makes it easier to modify (if necessary) in the future
+  switch (ticketType) {
+    case 'question':
+      return 'Question';
+    case 'task':
+      return 'Task';
+  }
+}
+
 export function createTicketEntity(ticket: Ticket): Entity {
+  const classes = [Entities.TICKET._class[0]];
+
+  const additionalClass = mapTypeToClass(ticket.type);
+  if (additionalClass) {
+    classes.push(additionalClass);
+  }
+
   return createIntegrationEntity({
     entityData: {
       source: ticket,
       assign: {
         _type: Entities.TICKET._type,
-        _class: Entities.TICKET._class,
+        _class: classes,
         _key: getTicketKey(ticket.id?.toString() as string),
         assigneeEmail: ticket.assignee_email,
         assigneeId: ticket.assignee_id,
