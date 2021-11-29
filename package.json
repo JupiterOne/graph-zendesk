@@ -1,7 +1,7 @@
 {
-  "name": "@jupiterone/integration-template",
-  "version": "0.0.0",
-  "description": "A JupiterOne Integration",
+  "name": "@jupiterone/graph-zendesk",
+  "version": "1.0.0",
+  "description": "JupiterOne integration for ingesting data from Zendesk",
   "license": "MPL-2.0",
   "main": "src/index.js",
   "types": "src/index.d.ts",
