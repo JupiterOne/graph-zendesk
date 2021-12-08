@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-
+import { backOff } from 'exponential-backoff';
 import {
   IntegrationProviderAPIError,
   IntegrationProviderAuthenticationError,
@@ -16,18 +16,48 @@ export class APIClient {
 
   private readonly baseUrl = `${this.config.zendeskSubdomain}.zendesk.com/api/v2`;
 
-  async apiRequestWithErrorHandling(path: string): Promise<any> {
+  async apiRequestWithErrorHandling(
+    path: string,
+    shouldRetry = true,
+  ): Promise<any> {
     try {
-      const res = await (
-        await fetch(`https://${this.baseUrl}${path}`, {
-          method: 'GET',
-          headers: {
-            Authorization: `Bearer ${this.config.zendeskAccessToken}`,
+      const res = await fetch(`https://${this.baseUrl}${path}`, {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${this.config.zendeskAccessToken}`,
+        },
+      });
+      const status = res.status;
+      if (status === 429) {
+        // Rate limit exceeded
+        const retryAfter = res.headers.get('Retry-After');
+        // Throw if retryAfter's value is greater than 10 seconds.
+        if (retryAfter > 10) {
+          throw new Error('Rate limit exceeded.');
+        }
+        // Retrying after sleeping for 5 seconds in case the retry-after header was not present.
+        const retryAfterMs = Number(retryAfter || 5) * 1000 + 3000;
+        await new Promise((resolve) => setTimeout(resolve, retryAfterMs));
+        // Exponential backoff. Retrying the request max 10 times.
+        return await backOff(() => this.apiRequestWithErrorHandling(path), {
+          retry: (_, attemptNumber) => {
+            if (attemptNumber > 10) {
+              throw new Error('API rate limit exceeded.');
+            }
+            return true;
           },
-        })
-      ).json();
-
-      return res;
+          numOfAttempts: 10,
+        });
+      }
+      if (status === 500) {
+        if (!shouldRetry) {
+          throw new Error(`Rate limit exceeded. Please try again later.`);
+        }
+        await new Promise((resolve) => setTimeout(resolve, 3000));
+        return this.apiRequestWithErrorHandling(path, false);
+      }
+      const body = await res.json();
+      return body;
     } catch (err) {
       throw new IntegrationProviderAPIError({
         cause: new Error(err.message),
