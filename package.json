@@ -34,7 +34,6 @@
     "@jupiterone/integration-sdk-testing": "^6.19.0"
   },
   "dependencies": {
-    "exponential-backoff": "^3.1.0",
     "node-fetch": "2.6.1"
   }
 }

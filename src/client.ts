@@ -1,5 +1,4 @@
 import fetch from 'node-fetch';
-import { backOff } from 'exponential-backoff';
 import {
   IntegrationProviderAPIError,
   IntegrationProviderAuthenticationError,
@@ -18,8 +17,11 @@ export class APIClient {
 
   async apiRequestWithErrorHandling(
     path: string,
-    shouldRetry = true,
+    attemptCounter = 1,
   ): Promise<any> {
+    if (attemptCounter >= 10) {
+      throw new Error('Max API request attempts reached.');
+    }
     try {
       const res = await fetch(`https://${this.baseUrl}${path}`, {
         method: 'GET',
@@ -31,30 +33,17 @@ export class APIClient {
       if (status === 429) {
         // Rate limit exceeded
         const retryAfter = res.headers.get('Retry-After');
-        // Throw if retryAfter's value is greater than 10 seconds.
-        if (retryAfter > 10) {
-          throw new Error('Rate limit exceeded.');
-        }
-        // Retrying after sleeping for 5 seconds in case the retry-after header was not present.
+        // We want to wait for the necessary time + 3s and then retry
         const retryAfterMs = Number(retryAfter || 5) * 1000 + 3000;
         await new Promise((resolve) => setTimeout(resolve, retryAfterMs));
-        // Exponential backoff. Retrying the request max 10 times.
-        return await backOff(() => this.apiRequestWithErrorHandling(path), {
-          retry: (_, attemptNumber) => {
-            if (attemptNumber > 10) {
-              throw new Error('API rate limit exceeded.');
-            }
-            return true;
-          },
-          numOfAttempts: 10,
-        });
+        return this.apiRequestWithErrorHandling(path, attemptCounter + 1);
       }
       if (status === 500) {
-        if (!shouldRetry) {
-          throw new Error(`Rate limit exceeded. Please try again later.`);
+        if (attemptCounter > 1) {
+          throw new Error('Internal server error.');
         }
         await new Promise((resolve) => setTimeout(resolve, 3000));
-        return this.apiRequestWithErrorHandling(path, false);
+        return this.apiRequestWithErrorHandling(path, 2);
       }
       const body = await res.json();
       return body;
