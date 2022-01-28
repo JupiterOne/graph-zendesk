@@ -7,7 +7,7 @@ questions:
     description: Returns a list of users with Zendesk access.
     queries:
       - name: good
-        query: FIND zendesk_user AS zu RETURN zu.displayName AS "Name", zu.username AS "Username", zu.id as "ID"
+        query: FIND zendesk_user AS zu RETURN zu.displayName AS Name, zu.username AS Username, zu.id as ID
     tags:
       - zendesk
       - user
