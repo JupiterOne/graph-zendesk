@@ -1,5 +1,4 @@
 import fetch from 'node-fetch';
-
 import {
   IntegrationProviderAPIError,
   IntegrationProviderAuthenticationError,
@@ -16,18 +15,38 @@ export class APIClient {
 
   private readonly baseUrl = `${this.config.zendeskSubdomain}.zendesk.com/api/v2`;
 
-  async apiRequestWithErrorHandling(path: string): Promise<any> {
+  async apiRequestWithErrorHandling(
+    path: string,
+    attemptCounter = 1,
+  ): Promise<any> {
+    if (attemptCounter >= 10) {
+      throw new Error('Max API request attempts reached.');
+    }
     try {
-      const res = await (
-        await fetch(`https://${this.baseUrl}${path}`, {
-          method: 'GET',
-          headers: {
-            Authorization: `Bearer ${this.config.zendeskAccessToken}`,
-          },
-        })
-      ).json();
-
-      return res;
+      const res = await fetch(`https://${this.baseUrl}${path}`, {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${this.config.zendeskAccessToken}`,
+        },
+      });
+      const status = res.status;
+      if (status === 429) {
+        // Rate limit exceeded
+        const retryAfter = res.headers.get('Retry-After');
+        // We want to wait for the necessary time + 3s and then retry
+        const retryAfterMs = Number(retryAfter || 5) * 1000 + 3000;
+        await new Promise((resolve) => setTimeout(resolve, retryAfterMs));
+        return this.apiRequestWithErrorHandling(path, attemptCounter + 1);
+      }
+      if (status === 500) {
+        if (attemptCounter > 1) {
+          throw new Error('Internal server error.');
+        }
+        await new Promise((resolve) => setTimeout(resolve, 3000));
+        return this.apiRequestWithErrorHandling(path, 2);
+      }
+      const body = await res.json();
+      return body;
     } catch (err) {
       throw new IntegrationProviderAPIError({
         cause: new Error(err.message),
