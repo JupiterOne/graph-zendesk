@@ -8,6 +8,13 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [1.1.0] - 2022-01-28
+
+### Added
+
+- Added questions.yaml file for managed questions.
+- Updated Account entity \_class and properties.
+
 ## [1.0.0] - 2021-11-24
 
 ### Added
