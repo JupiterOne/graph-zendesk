@@ -1,3 +1,14 @@
+export interface Account {
+  url: string;
+  name: string;
+  sandbox: boolean;
+  subdomain: string;
+  time_format: number;
+  time_zone: string;
+  owner_id: number;
+  multiproduct: boolean;
+}
+
 export interface User {
   active?: boolean;
   chat_only?: boolean;

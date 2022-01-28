@@ -47,7 +47,7 @@ export const Entities: Record<
   ACCOUNT: {
     resourceName: 'Account',
     _type: 'zendesk_account',
-    _class: ['User'],
+    _class: ['Account'],
   },
 };
 

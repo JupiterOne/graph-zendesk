@@ -1,0 +1,13 @@
+---
+sourceId: managed:zendesk
+integrationDefinitionId: '${integration_definition_id}'
+questions:
+  - id: managed-question-zendesk-access-list
+    title: Who has access to Zendesk in my organization?
+    description: Returns a list of users with Zendesk access.
+    queries:
+      - name: good
+        query: FIND zendesk_user AS zu RETURN zu.displayName AS Name, zu.username AS Username, zu.id as ID
+    tags:
+      - zendesk
+      - user
