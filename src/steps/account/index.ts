@@ -14,8 +14,8 @@ export async function fetchAccount({
 }: IntegrationStepExecutionContext<IntegrationConfig>) {
   const apiClient = createAPIClient(instance.config);
 
-  const currentUser = await apiClient.getCurrentUser();
-  const accountEntity = createAccountEntity(currentUser);
+  const currentAccount = await apiClient.getCurrentAccount();
+  const accountEntity = createAccountEntity(currentAccount);
   await jobState.addEntity(accountEntity);
   await jobState.setData(ACCOUNT_ENTITY_KEY, accountEntity);
 }

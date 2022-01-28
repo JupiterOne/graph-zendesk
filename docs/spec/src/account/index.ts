@@ -13,7 +13,7 @@ export const accountSpec: StepSpec<IntegrationConfig>[] = [
       {
         resourceName: 'Account',
         _type: 'zendesk_account',
-        _class: ['User'],
+        _class: ['Account'],
       },
     ],
     relationships: [],

@@ -6,7 +6,7 @@ import {
 } from '@jupiterone/integration-sdk-core';
 
 import { IntegrationConfig } from './config';
-import { Group, Organization, Ticket, User } from './types';
+import { Account, Group, Organization, Ticket, User } from './types';
 
 export type ResourceIteratee<T> = (each: T) => Promise<void> | void;
 export type PageIteratee<T> = (page: T[]) => Promise<void>;
@@ -140,6 +140,10 @@ export class APIClient {
 
   public async getCurrentUser(): Promise<User> {
     return (await this.apiRequestWithErrorHandling(`/users/me.json`)).user;
+  }
+
+  public async getCurrentAccount(): Promise<Account> {
+    return (await this.apiRequestWithErrorHandling(`/account`)).account;
   }
 }
 

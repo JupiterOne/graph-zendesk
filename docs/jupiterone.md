@@ -95,7 +95,7 @@ The following entities are created:
 
 | Resources    | Entity `_type`         | Entity `_class` |
 | ------------ | ---------------------- | --------------- |
-| Account      | `zendesk_account`      | `User`          |
+| Account      | `zendesk_account`      | `Account`       |
 | Group        | `zendesk_group`        | `Group`         |
 | Organization | `zendesk_organization` | `Organization`  |
 | Ticket       | `zendesk_ticket`       | `Record`        |

@@ -55,10 +55,9 @@ describe('#fetchAccount', () => {
           _type: { const: Entities.ACCOUNT._type },
           _class: { const: Entities.ACCOUNT._class },
           _key: { type: 'string' },
-          email: { type: 'string' },
-          id: { type: 'string' },
+          accountId: { type: 'string' },
+          accessURL: { type: 'string' },
           name: { type: 'string' },
-          username: { type: 'string' },
         },
       },
     });
