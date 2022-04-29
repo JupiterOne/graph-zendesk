@@ -11,3 +11,14 @@ questions:
     tags:
       - zendesk
       - user
+  - id: managed-question-zendesk-open-tickets-by-group
+    title: How many open tickets does each group have?
+    description: Returns a count of how many open tickets are assigned to each group
+    queries:
+      - name: good
+        query: FIND zendesk_group 
+          THAT HAS zendesk_ticket with status="open" as z 
+          RETURN zendesk_group.displayName as Group, count(z) as Tickets
+    tags:
+      - zendesk
+      - user
