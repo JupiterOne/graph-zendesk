@@ -1,4 +1,4 @@
-# Integration with JupiterOne
+# Zendesk
 
 ## Zendesk + JupiterOne Integration Benefits
 
