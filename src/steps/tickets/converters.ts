@@ -26,14 +26,19 @@ export function mapTypeToClass(
   }
 }
 
-export function createTicketEntity(ticket: Ticket): Entity {
+export function createTicketEntity(
+  ticket: Ticket,
+  omitDescription: boolean,
+): Entity {
   const classes = [Entities.TICKET._class[0]];
 
   const additionalClass = mapTypeToClass(ticket.type);
   if (additionalClass) {
     classes.push(additionalClass);
   }
-
+  if (omitDescription) {
+    ticket.description = '<omitted>';
+  }
   return createIntegrationEntity({
     entityData: {
       source: ticket,

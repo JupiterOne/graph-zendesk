@@ -28,6 +28,9 @@ export const instanceConfigFields: IntegrationInstanceConfigFieldMap = {
   zendeskSubdomain: {
     type: 'string',
   },
+  omitTicketDescription: {
+    type: 'boolean',
+  },
 };
 
 /**
@@ -37,6 +40,7 @@ export const instanceConfigFields: IntegrationInstanceConfigFieldMap = {
 export interface IntegrationConfig extends IntegrationInstanceConfig {
   zendeskAccessToken: string;
   zendeskSubdomain: string;
+  omitTicketDescription: boolean;
 }
 
 export async function validateInvocation(

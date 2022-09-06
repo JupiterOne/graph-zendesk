@@ -32,6 +32,7 @@ it('auth error', async () => {
     instanceConfig: {
       zendeskAccessToken: 'INVALID',
       zendeskSubdomain: 'INVALID',
+      omitTicketDescription: false,
     },
   });
 
