@@ -8,6 +8,13 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [1.1.0] - 2022-01-28
+
+### Added
+
+- Optional flag OMIT_TICKET_DESCRIPTION allows ticket descriptions to be
+  replaced with `<omitted>`.
+
 ## [1.1.1] - 2022-07-12
 
 ### Fixed
