@@ -19,7 +19,10 @@ export async function fetchTickets({
   const apiClient = createAPIClient(instance.config);
 
   await apiClient.iterateTickets(async (ticket) => {
-    const ticketEntity = createTicketEntity(ticket);
+    const ticketEntity = createTicketEntity(
+      ticket,
+      instance.config.omitTicketDescription,
+    );
     await jobState.addEntity(ticketEntity);
   });
 }
