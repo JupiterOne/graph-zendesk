@@ -1,0 +1,12 @@
+openapi: 3.0.1
+info:
+  title: '@jupiterone/graph-zendesk'
+  description: JupiterOne integration for ingesting data from Zendesk
+  x-cortex-git:
+    github:
+      repository: JupiterOne/graph-zendesk
+  x-cortex-owners:
+    - type: group
+      name: JupiterOne/integrations
+  x-cortex-service-groups: tier-4
+  x-cortex-tag: '@jupiterone/graph-zendesk'
