@@ -6,7 +6,12 @@ import {
 import { createAPIClient } from '../../client';
 import { IntegrationConfig } from '../../config';
 import { createTicketEntity } from './converters';
-import { Entities, Relationships, IntegrationSteps } from '../constants';
+import {
+  Entities,
+  Relationships,
+  IntegrationSteps,
+  IngestionSources,
+} from '../constants';
 import { RelationshipClass } from '@jupiterone/integration-sdk-core';
 import { getUserKey } from '../users/converters';
 import { getGroupKey } from '../groups/converters';
@@ -106,6 +111,7 @@ export async function buildTicketGroupRelationships({
 export const ticketSteps: IntegrationStep<IntegrationConfig>[] = [
   {
     id: IntegrationSteps.TICKETS,
+    ingestionSourceId: IngestionSources.TICKETS,
     name: 'Fetch Tickets',
     entities: [Entities.TICKET],
     relationships: [],

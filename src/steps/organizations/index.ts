@@ -13,6 +13,7 @@ import {
   Relationships,
   IntegrationSteps,
   ACCOUNT_ENTITY_KEY,
+  IngestionSources,
 } from '../constants';
 import { getGroupKey } from '../groups/converters';
 
@@ -67,6 +68,7 @@ export async function buildOrganizationGroupRelationships({
 export const organizationSteps: IntegrationStep<IntegrationConfig>[] = [
   {
     id: IntegrationSteps.ORGANIZATIONS,
+    ingestionSourceId: IngestionSources.ORGANIZATIONS,
     name: 'Fetch Organizations',
     entities: [Entities.ORGANIZATION],
     relationships: [Relationships.ACCOUNT_HAS_ORGANIZATION],

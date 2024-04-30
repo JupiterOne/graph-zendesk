@@ -6,7 +6,12 @@ import {
 } from '@jupiterone/integration-sdk-core';
 import { createAPIClient } from '../../client';
 import { IntegrationConfig } from '../../config';
-import { Entities, IntegrationSteps, Relationships } from '../constants';
+import {
+  Entities,
+  IngestionSources,
+  IntegrationSteps,
+  Relationships,
+} from '../constants';
 import { getGroupKey } from '../groups/converters';
 import { createUserEntity } from './converters';
 
@@ -55,6 +60,7 @@ export async function buildUserGroupRelationships({
 export const userSteps: IntegrationStep<IntegrationConfig>[] = [
   {
     id: IntegrationSteps.USERS,
+    ingestionSourceId: IngestionSources.USERS,
     name: 'Fetch Users',
     entities: [Entities.USER],
     relationships: [],
