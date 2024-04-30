@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#buildOrganizationGroupRelationships should collect data 1`] = `
-Object {
-  "collectedEntities": Array [
-    Object {
-      "_class": Array [
+{
+  "collectedEntities": [
+    {
+      "_class": [
         "Group",
       ],
       "_key": "zendesk_group:5812638858781",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "created_at": "2022-07-06T18:46:13Z",
             "default": true,
             "deleted": false,
@@ -35,27 +35,27 @@ Object {
       "updatedAt": "2022-07-06T18:46:13Z",
       "url": "https://creativice.zendesk.com/api/v2/groups/5812638858781.json",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Organization",
       ],
       "_key": "zendesk_organization:5812638859421",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "created_at": "2022-07-06T18:46:13Z",
             "details": null,
-            "domain_names": Array [],
+            "domain_names": [],
             "external_id": null,
             "group_id": null,
             "id": 5812638859421,
             "name": "Creativice",
             "notes": null,
-            "organization_fields": Object {},
+            "organization_fields": {},
             "shared_comments": false,
             "shared_tickets": false,
-            "tags": Array [],
+            "tags": [],
             "updated_at": "2022-07-06T18:46:13Z",
             "url": "https://creativice.zendesk.com/api/v2/organizations/5812638859421.json",
           },
@@ -64,21 +64,21 @@ Object {
       "_type": "zendesk_organization",
       "createdAt": "2022-07-06T18:46:13Z",
       "createdOn": undefined,
-      "details": Array [],
+      "details": [],
       "displayName": "Creativice",
-      "domainNames": Array [],
+      "domainNames": [],
       "groupId": undefined,
       "id": "5812638859421",
       "name": "Creativice",
-      "notes": Array [],
+      "notes": [],
       "sharedComments": false,
       "sharedTickets": false,
       "updatedAt": "2022-07-06T18:46:13Z",
       "url": "https://creativice.zendesk.com/api/v2/organizations/5812638859421.json",
     },
   ],
-  "collectedRelationships": Array [],
-  "encounteredTypes": Array [
+  "collectedRelationships": [],
+  "encounteredTypes": [
     "zendesk_group",
     "zendesk_organization",
   ],
@@ -88,17 +88,17 @@ Object {
 `;
 
 exports[`#fetchOrganizations should collect data 1`] = `
-Object {
-  "collectedEntities": Array [
-    Object {
-      "_class": Array [
+{
+  "collectedEntities": [
+    {
+      "_class": [
         "Account",
       ],
       "_key": "zendesk_account:creativice",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "multiproduct": true,
             "name": "Creativice",
             "owner_id": 5812690998173,
@@ -117,27 +117,27 @@ Object {
       "displayName": "Creativice",
       "name": "Creativice",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Organization",
       ],
       "_key": "zendesk_organization:5812638859421",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "created_at": "2022-07-06T18:46:13Z",
             "details": null,
-            "domain_names": Array [],
+            "domain_names": [],
             "external_id": null,
             "group_id": null,
             "id": 5812638859421,
             "name": "Creativice",
             "notes": null,
-            "organization_fields": Object {},
+            "organization_fields": {},
             "shared_comments": false,
             "shared_tickets": false,
-            "tags": Array [],
+            "tags": [],
             "updated_at": "2022-07-06T18:46:13Z",
             "url": "https://creativice.zendesk.com/api/v2/organizations/5812638859421.json",
           },
@@ -146,21 +146,21 @@ Object {
       "_type": "zendesk_organization",
       "createdAt": "2022-07-06T18:46:13Z",
       "createdOn": undefined,
-      "details": Array [],
+      "details": [],
       "displayName": "Creativice",
-      "domainNames": Array [],
+      "domainNames": [],
       "groupId": undefined,
       "id": "5812638859421",
       "name": "Creativice",
-      "notes": Array [],
+      "notes": [],
       "sharedComments": false,
       "sharedTickets": false,
       "updatedAt": "2022-07-06T18:46:13Z",
       "url": "https://creativice.zendesk.com/api/v2/organizations/5812638859421.json",
     },
   ],
-  "collectedRelationships": Array [
-    Object {
+  "collectedRelationships": [
+    {
       "_class": "HAS",
       "_fromEntityKey": "zendesk_account:creativice",
       "_key": "zendesk_account:creativice|has|zendesk_organization:5812638859421",
@@ -169,7 +169,7 @@ Object {
       "displayName": "HAS",
     },
   ],
-  "encounteredTypes": Array [
+  "encounteredTypes": [
     "zendesk_account",
     "zendesk_organization",
     "zendesk_account_has_organization",

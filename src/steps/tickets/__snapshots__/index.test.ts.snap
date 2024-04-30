@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#buildTicketAssigneeRelationships should collect data 1`] = `
-Object {
-  "collectedEntities": Array [
-    Object {
-      "_class": Array [
+{
+  "collectedEntities": [
+    {
+      "_class": [
         "User",
       ],
       "_key": "zendesk_user:5812665774109",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "active": true,
             "alias": null,
             "created_at": "2022-07-06T18:46:17Z",
@@ -31,7 +31,7 @@ Object {
             "only_private_comments": false,
             "organization_id": null,
             "phone": null,
-            "photo": Object {
+            "photo": {
               "content_type": "image/png",
               "content_url": "https://creativice.zendesk.com/system/photos/5812638919325/profile_image_5812665774109_14239391.png",
               "deleted": false,
@@ -41,8 +41,8 @@ Object {
               "inline": false,
               "mapped_content_url": "https://creativice.zendesk.com/system/photos/5812638919325/profile_image_5812665774109_14239391.png",
               "size": 10183,
-              "thumbnails": Array [
-                Object {
+              "thumbnails": [
+                {
                   "content_type": "image/png",
                   "content_url": "https://creativice.zendesk.com/system/photos/5812638919325/profile_image_5812665774109_14239391_thumb.png",
                   "deleted": false,
@@ -68,13 +68,13 @@ Object {
             "shared_phone_number": null,
             "signature": null,
             "suspended": false,
-            "tags": Array [],
+            "tags": [],
             "ticket_restriction": "requested",
             "time_zone": "Europe/Belgrade",
             "two_factor_auth_enabled": false,
             "updated_at": "2022-07-06T18:46:17Z",
             "url": "https://creativice.zendesk.com/api/v2/users/5812665774109.json",
-            "user_fields": Object {},
+            "user_fields": {},
             "verified": false,
           },
         },
@@ -106,15 +106,15 @@ Object {
       "username": "customer@example.com",
       "verified": false,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "zendesk_user:5812690998173",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "active": true,
             "alias": null,
             "created_at": "2022-07-06T18:46:05Z",
@@ -144,13 +144,13 @@ Object {
             "shared_phone_number": null,
             "signature": null,
             "suspended": false,
-            "tags": Array [],
+            "tags": [],
             "ticket_restriction": null,
             "time_zone": "Europe/Belgrade",
             "two_factor_auth_enabled": null,
             "updated_at": "2022-07-11T18:05:50Z",
             "url": "https://creativice.zendesk.com/api/v2/users/5812690998173.json",
-            "user_fields": Object {},
+            "user_fields": {},
             "verified": true,
           },
         },
@@ -182,22 +182,22 @@ Object {
       "username": "stefan@creativice.com",
       "verified": true,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Record",
       ],
       "_key": "zendesk_ticket:1",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "allow_attachments": true,
             "allow_channelback": false,
             "assignee_id": 5812690998173,
             "brand_id": 5812681174557,
-            "collaborator_ids": Array [],
+            "collaborator_ids": [],
             "created_at": "2022-07-06T18:46:17Z",
-            "custom_fields": Array [],
+            "custom_fields": [],
             "description": "Hi there,
 
 I’m sending an email because I’m having a problem setting up your new product. Can you help me troubleshoot?
@@ -207,10 +207,10 @@ Thanks,
 
 ",
             "due_at": null,
-            "email_cc_ids": Array [],
+            "email_cc_ids": [],
             "external_id": null,
-            "follower_ids": Array [],
-            "followup_ids": Array [],
+            "follower_ids": [],
+            "followup_ids": [],
             "forum_topic_id": null,
             "group_id": 5812638858781,
             "has_incidents": false,
@@ -223,11 +223,11 @@ Thanks,
             "recipient": null,
             "requester_id": 5812665774109,
             "satisfaction_rating": null,
-            "sharing_agreement_ids": Array [],
+            "sharing_agreement_ids": [],
             "status": "open",
             "subject": "Sample ticket: Meet the ticket",
             "submitter_id": 5812690998173,
-            "tags": Array [
+            "tags": [
               "sample",
               "support",
               "zendesk",
@@ -236,12 +236,12 @@ Thanks,
             "type": "incident",
             "updated_at": "2022-07-06T18:46:17Z",
             "url": "https://creativice.zendesk.com/api/v2/tickets/1.json",
-            "via": Object {
+            "via": {
               "channel": "sample_ticket",
-              "source": Object {
-                "from": Object {},
+              "source": {
+                "from": {},
                 "rel": null,
-                "to": Object {},
+                "to": {},
               },
             },
           },
@@ -252,7 +252,7 @@ Thanks,
       "assigneeEmail": undefined,
       "assigneeId": 5812690998173,
       "brandId": 5812681174557,
-      "collaboratorIds": Array [],
+      "collaboratorIds": [],
       "createdAt": "2022-07-06T18:46:17Z",
       "createdOn": undefined,
       "description": "Hi there,
@@ -265,8 +265,8 @@ Thanks,
 ",
       "displayName": "Sample ticket: Meet the ticket",
       "dueAt": undefined,
-      "emailCcIds": Array [],
-      "followerIds": Array [],
+      "emailCcIds": [],
+      "followerIds": [],
       "forumTopicId": undefined,
       "groupId": 5812638858781,
       "hasIncidents": false,
@@ -275,7 +275,7 @@ Thanks,
       "organizationId": undefined,
       "priority": "normal",
       "problemId": undefined,
-      "queries": Array [
+      "queries": [
         "Hi there,
 
 I’m sending an email because I’m having a problem setting up your new product. Can you help me troubleshoot?
@@ -290,7 +290,7 @@ Thanks,
       "requesterId": 5812665774109,
       "status": "open",
       "submitterId": 5812690998173,
-      "tags": Array [
+      "tags": [
         "sample",
         "support",
         "zendesk",
@@ -298,28 +298,28 @@ Thanks,
       "type": "incident",
       "url": "https://creativice.zendesk.com/api/v2/tickets/1.json",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Record",
       ],
       "_key": "zendesk_ticket:2",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "allow_attachments": true,
             "allow_channelback": false,
             "assignee_id": 5812690998173,
             "brand_id": 5812681174557,
-            "collaborator_ids": Array [],
+            "collaborator_ids": [],
             "created_at": "2022-07-11T15:33:00Z",
-            "custom_fields": Array [],
+            "custom_fields": [],
             "description": "Test",
             "due_at": null,
-            "email_cc_ids": Array [],
+            "email_cc_ids": [],
             "external_id": null,
-            "follower_ids": Array [],
-            "followup_ids": Array [],
+            "follower_ids": [],
+            "followup_ids": [],
             "forum_topic_id": null,
             "group_id": 5812638858781,
             "has_incidents": false,
@@ -332,21 +332,21 @@ Thanks,
             "recipient": null,
             "requester_id": 5812690998173,
             "satisfaction_rating": null,
-            "sharing_agreement_ids": Array [],
+            "sharing_agreement_ids": [],
             "status": "open",
             "subject": "test ticket #1",
             "submitter_id": 5812690998173,
-            "tags": Array [],
+            "tags": [],
             "ticket_form_id": 5812670359197,
             "type": null,
             "updated_at": "2022-07-11T15:33:00Z",
             "url": "https://creativice.zendesk.com/api/v2/tickets/2.json",
-            "via": Object {
+            "via": {
               "channel": "web",
-              "source": Object {
-                "from": Object {},
+              "source": {
+                "from": {},
                 "rel": null,
-                "to": Object {},
+                "to": {},
               },
             },
           },
@@ -357,14 +357,14 @@ Thanks,
       "assigneeEmail": undefined,
       "assigneeId": 5812690998173,
       "brandId": 5812681174557,
-      "collaboratorIds": Array [],
+      "collaboratorIds": [],
       "createdAt": "2022-07-11T15:33:00Z",
       "createdOn": undefined,
       "description": "Test",
       "displayName": "test ticket #1",
       "dueAt": undefined,
-      "emailCcIds": Array [],
-      "followerIds": Array [],
+      "emailCcIds": [],
+      "followerIds": [],
       "forumTopicId": undefined,
       "groupId": 5812638858781,
       "hasIncidents": false,
@@ -373,7 +373,7 @@ Thanks,
       "organizationId": 5812638859421,
       "priority": null,
       "problemId": undefined,
-      "queries": Array [
+      "queries": [
         "Test",
       ],
       "recipient": undefined,
@@ -384,28 +384,28 @@ Thanks,
       "type": null,
       "url": "https://creativice.zendesk.com/api/v2/tickets/2.json",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Record",
       ],
       "_key": "zendesk_ticket:3",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "allow_attachments": true,
             "allow_channelback": false,
             "assignee_id": 5812690998173,
             "brand_id": 5812681174557,
-            "collaborator_ids": Array [],
+            "collaborator_ids": [],
             "created_at": "2022-07-11T17:42:31Z",
-            "custom_fields": Array [],
+            "custom_fields": [],
             "description": "Test",
             "due_at": null,
-            "email_cc_ids": Array [],
+            "email_cc_ids": [],
             "external_id": null,
-            "follower_ids": Array [],
-            "followup_ids": Array [],
+            "follower_ids": [],
+            "followup_ids": [],
             "forum_topic_id": null,
             "group_id": 5812638858781,
             "has_incidents": false,
@@ -418,21 +418,21 @@ Thanks,
             "recipient": null,
             "requester_id": 5812690998173,
             "satisfaction_rating": null,
-            "sharing_agreement_ids": Array [],
+            "sharing_agreement_ids": [],
             "status": "open",
             "subject": "test ticket #2",
             "submitter_id": 5812690998173,
-            "tags": Array [],
+            "tags": [],
             "ticket_form_id": 5812670359197,
             "type": null,
             "updated_at": "2022-07-11T17:42:31Z",
             "url": "https://creativice.zendesk.com/api/v2/tickets/3.json",
-            "via": Object {
+            "via": {
               "channel": "web",
-              "source": Object {
-                "from": Object {},
+              "source": {
+                "from": {},
                 "rel": null,
-                "to": Object {},
+                "to": {},
               },
             },
           },
@@ -443,14 +443,14 @@ Thanks,
       "assigneeEmail": undefined,
       "assigneeId": 5812690998173,
       "brandId": 5812681174557,
-      "collaboratorIds": Array [],
+      "collaboratorIds": [],
       "createdAt": "2022-07-11T17:42:31Z",
       "createdOn": undefined,
       "description": "Test",
       "displayName": "test ticket #2",
       "dueAt": undefined,
-      "emailCcIds": Array [],
-      "followerIds": Array [],
+      "emailCcIds": [],
+      "followerIds": [],
       "forumTopicId": undefined,
       "groupId": 5812638858781,
       "hasIncidents": false,
@@ -459,7 +459,7 @@ Thanks,
       "organizationId": 5812638859421,
       "priority": null,
       "problemId": undefined,
-      "queries": Array [
+      "queries": [
         "Test",
       ],
       "recipient": undefined,
@@ -470,28 +470,28 @@ Thanks,
       "type": null,
       "url": "https://creativice.zendesk.com/api/v2/tickets/3.json",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Record",
       ],
       "_key": "zendesk_ticket:4",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "allow_attachments": true,
             "allow_channelback": false,
             "assignee_id": 5812690998173,
             "brand_id": 5812681174557,
-            "collaborator_ids": Array [],
+            "collaborator_ids": [],
             "created_at": "2022-07-11T17:42:39Z",
-            "custom_fields": Array [],
+            "custom_fields": [],
             "description": "Test",
             "due_at": null,
-            "email_cc_ids": Array [],
+            "email_cc_ids": [],
             "external_id": null,
-            "follower_ids": Array [],
-            "followup_ids": Array [],
+            "follower_ids": [],
+            "followup_ids": [],
             "forum_topic_id": null,
             "group_id": 5812638858781,
             "has_incidents": false,
@@ -504,21 +504,21 @@ Thanks,
             "recipient": null,
             "requester_id": 5812690998173,
             "satisfaction_rating": null,
-            "sharing_agreement_ids": Array [],
+            "sharing_agreement_ids": [],
             "status": "open",
             "subject": "test ticket #3",
             "submitter_id": 5812690998173,
-            "tags": Array [],
+            "tags": [],
             "ticket_form_id": 5812670359197,
             "type": null,
             "updated_at": "2022-07-11T17:42:39Z",
             "url": "https://creativice.zendesk.com/api/v2/tickets/4.json",
-            "via": Object {
+            "via": {
               "channel": "web",
-              "source": Object {
-                "from": Object {},
+              "source": {
+                "from": {},
                 "rel": null,
-                "to": Object {},
+                "to": {},
               },
             },
           },
@@ -529,14 +529,14 @@ Thanks,
       "assigneeEmail": undefined,
       "assigneeId": 5812690998173,
       "brandId": 5812681174557,
-      "collaboratorIds": Array [],
+      "collaboratorIds": [],
       "createdAt": "2022-07-11T17:42:39Z",
       "createdOn": undefined,
       "description": "Test",
       "displayName": "test ticket #3",
       "dueAt": undefined,
-      "emailCcIds": Array [],
-      "followerIds": Array [],
+      "emailCcIds": [],
+      "followerIds": [],
       "forumTopicId": undefined,
       "groupId": 5812638858781,
       "hasIncidents": false,
@@ -545,7 +545,7 @@ Thanks,
       "organizationId": 5812638859421,
       "priority": null,
       "problemId": undefined,
-      "queries": Array [
+      "queries": [
         "Test",
       ],
       "recipient": undefined,
@@ -556,28 +556,28 @@ Thanks,
       "type": null,
       "url": "https://creativice.zendesk.com/api/v2/tickets/4.json",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Record",
       ],
       "_key": "zendesk_ticket:5",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "allow_attachments": true,
             "allow_channelback": false,
             "assignee_id": 5812690998173,
             "brand_id": 5812681174557,
-            "collaborator_ids": Array [],
+            "collaborator_ids": [],
             "created_at": "2022-07-11T17:42:46Z",
-            "custom_fields": Array [],
+            "custom_fields": [],
             "description": "Test",
             "due_at": null,
-            "email_cc_ids": Array [],
+            "email_cc_ids": [],
             "external_id": null,
-            "follower_ids": Array [],
-            "followup_ids": Array [],
+            "follower_ids": [],
+            "followup_ids": [],
             "forum_topic_id": null,
             "group_id": 5812638858781,
             "has_incidents": false,
@@ -590,21 +590,21 @@ Thanks,
             "recipient": null,
             "requester_id": 5812690998173,
             "satisfaction_rating": null,
-            "sharing_agreement_ids": Array [],
+            "sharing_agreement_ids": [],
             "status": "open",
             "subject": "test ticket #4",
             "submitter_id": 5812690998173,
-            "tags": Array [],
+            "tags": [],
             "ticket_form_id": 5812670359197,
             "type": null,
             "updated_at": "2022-07-11T17:42:46Z",
             "url": "https://creativice.zendesk.com/api/v2/tickets/5.json",
-            "via": Object {
+            "via": {
               "channel": "web",
-              "source": Object {
-                "from": Object {},
+              "source": {
+                "from": {},
                 "rel": null,
-                "to": Object {},
+                "to": {},
               },
             },
           },
@@ -615,14 +615,14 @@ Thanks,
       "assigneeEmail": undefined,
       "assigneeId": 5812690998173,
       "brandId": 5812681174557,
-      "collaboratorIds": Array [],
+      "collaboratorIds": [],
       "createdAt": "2022-07-11T17:42:46Z",
       "createdOn": undefined,
       "description": "Test",
       "displayName": "test ticket #4",
       "dueAt": undefined,
-      "emailCcIds": Array [],
-      "followerIds": Array [],
+      "emailCcIds": [],
+      "followerIds": [],
       "forumTopicId": undefined,
       "groupId": 5812638858781,
       "hasIncidents": false,
@@ -631,7 +631,7 @@ Thanks,
       "organizationId": 5812638859421,
       "priority": null,
       "problemId": undefined,
-      "queries": Array [
+      "queries": [
         "Test",
       ],
       "recipient": undefined,
@@ -642,28 +642,28 @@ Thanks,
       "type": null,
       "url": "https://creativice.zendesk.com/api/v2/tickets/5.json",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Record",
       ],
       "_key": "zendesk_ticket:6",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "allow_attachments": true,
             "allow_channelback": false,
             "assignee_id": 5812690998173,
             "brand_id": 5812681174557,
-            "collaborator_ids": Array [],
+            "collaborator_ids": [],
             "created_at": "2022-07-11T17:42:55Z",
-            "custom_fields": Array [],
+            "custom_fields": [],
             "description": "Test",
             "due_at": null,
-            "email_cc_ids": Array [],
+            "email_cc_ids": [],
             "external_id": null,
-            "follower_ids": Array [],
-            "followup_ids": Array [],
+            "follower_ids": [],
+            "followup_ids": [],
             "forum_topic_id": null,
             "group_id": 5812638858781,
             "has_incidents": false,
@@ -676,21 +676,21 @@ Thanks,
             "recipient": null,
             "requester_id": 5812690998173,
             "satisfaction_rating": null,
-            "sharing_agreement_ids": Array [],
+            "sharing_agreement_ids": [],
             "status": "open",
             "subject": "test ticket #4",
             "submitter_id": 5812690998173,
-            "tags": Array [],
+            "tags": [],
             "ticket_form_id": 5812670359197,
             "type": null,
             "updated_at": "2022-07-11T17:42:55Z",
             "url": "https://creativice.zendesk.com/api/v2/tickets/6.json",
-            "via": Object {
+            "via": {
               "channel": "web",
-              "source": Object {
-                "from": Object {},
+              "source": {
+                "from": {},
                 "rel": null,
-                "to": Object {},
+                "to": {},
               },
             },
           },
@@ -701,14 +701,14 @@ Thanks,
       "assigneeEmail": undefined,
       "assigneeId": 5812690998173,
       "brandId": 5812681174557,
-      "collaboratorIds": Array [],
+      "collaboratorIds": [],
       "createdAt": "2022-07-11T17:42:55Z",
       "createdOn": undefined,
       "description": "Test",
       "displayName": "test ticket #4",
       "dueAt": undefined,
-      "emailCcIds": Array [],
-      "followerIds": Array [],
+      "emailCcIds": [],
+      "followerIds": [],
       "forumTopicId": undefined,
       "groupId": 5812638858781,
       "hasIncidents": false,
@@ -717,7 +717,7 @@ Thanks,
       "organizationId": 5812638859421,
       "priority": null,
       "problemId": undefined,
-      "queries": Array [
+      "queries": [
         "Test",
       ],
       "recipient": undefined,
@@ -729,8 +729,8 @@ Thanks,
       "url": "https://creativice.zendesk.com/api/v2/tickets/6.json",
     },
   ],
-  "collectedRelationships": Array [
-    Object {
+  "collectedRelationships": [
+    {
       "_class": "ASSIGNED",
       "_fromEntityKey": "zendesk_user:5812690998173",
       "_key": "zendesk_user:5812690998173|assigned|zendesk_ticket:1",
@@ -738,7 +738,7 @@ Thanks,
       "_type": "zendesk_user_assigned_ticket",
       "displayName": "ASSIGNED",
     },
-    Object {
+    {
       "_class": "ASSIGNED",
       "_fromEntityKey": "zendesk_user:5812690998173",
       "_key": "zendesk_user:5812690998173|assigned|zendesk_ticket:2",
@@ -746,7 +746,7 @@ Thanks,
       "_type": "zendesk_user_assigned_ticket",
       "displayName": "ASSIGNED",
     },
-    Object {
+    {
       "_class": "ASSIGNED",
       "_fromEntityKey": "zendesk_user:5812690998173",
       "_key": "zendesk_user:5812690998173|assigned|zendesk_ticket:3",
@@ -754,7 +754,7 @@ Thanks,
       "_type": "zendesk_user_assigned_ticket",
       "displayName": "ASSIGNED",
     },
-    Object {
+    {
       "_class": "ASSIGNED",
       "_fromEntityKey": "zendesk_user:5812690998173",
       "_key": "zendesk_user:5812690998173|assigned|zendesk_ticket:4",
@@ -762,7 +762,7 @@ Thanks,
       "_type": "zendesk_user_assigned_ticket",
       "displayName": "ASSIGNED",
     },
-    Object {
+    {
       "_class": "ASSIGNED",
       "_fromEntityKey": "zendesk_user:5812690998173",
       "_key": "zendesk_user:5812690998173|assigned|zendesk_ticket:5",
@@ -770,7 +770,7 @@ Thanks,
       "_type": "zendesk_user_assigned_ticket",
       "displayName": "ASSIGNED",
     },
-    Object {
+    {
       "_class": "ASSIGNED",
       "_fromEntityKey": "zendesk_user:5812690998173",
       "_key": "zendesk_user:5812690998173|assigned|zendesk_ticket:6",
@@ -779,7 +779,7 @@ Thanks,
       "displayName": "ASSIGNED",
     },
   ],
-  "encounteredTypes": Array [
+  "encounteredTypes": [
     "zendesk_user",
     "zendesk_ticket",
     "zendesk_user_assigned_ticket",
@@ -790,24 +790,24 @@ Thanks,
 `;
 
 exports[`#buildTicketGroupRelationships should collect data 1`] = `
-Object {
-  "collectedEntities": Array [
-    Object {
-      "_class": Array [
+{
+  "collectedEntities": [
+    {
+      "_class": [
         "Record",
       ],
       "_key": "zendesk_ticket:1",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "allow_attachments": true,
             "allow_channelback": false,
             "assignee_id": 5812690998173,
             "brand_id": 5812681174557,
-            "collaborator_ids": Array [],
+            "collaborator_ids": [],
             "created_at": "2022-07-06T18:46:17Z",
-            "custom_fields": Array [],
+            "custom_fields": [],
             "description": "Hi there,
 
 I’m sending an email because I’m having a problem setting up your new product. Can you help me troubleshoot?
@@ -817,10 +817,10 @@ Thanks,
 
 ",
             "due_at": null,
-            "email_cc_ids": Array [],
+            "email_cc_ids": [],
             "external_id": null,
-            "follower_ids": Array [],
-            "followup_ids": Array [],
+            "follower_ids": [],
+            "followup_ids": [],
             "forum_topic_id": null,
             "group_id": 5812638858781,
             "has_incidents": false,
@@ -833,11 +833,11 @@ Thanks,
             "recipient": null,
             "requester_id": 5812665774109,
             "satisfaction_rating": null,
-            "sharing_agreement_ids": Array [],
+            "sharing_agreement_ids": [],
             "status": "open",
             "subject": "Sample ticket: Meet the ticket",
             "submitter_id": 5812690998173,
-            "tags": Array [
+            "tags": [
               "sample",
               "support",
               "zendesk",
@@ -846,12 +846,12 @@ Thanks,
             "type": "incident",
             "updated_at": "2022-07-06T18:46:17Z",
             "url": "https://creativice.zendesk.com/api/v2/tickets/1.json",
-            "via": Object {
+            "via": {
               "channel": "sample_ticket",
-              "source": Object {
-                "from": Object {},
+              "source": {
+                "from": {},
                 "rel": null,
-                "to": Object {},
+                "to": {},
               },
             },
           },
@@ -862,7 +862,7 @@ Thanks,
       "assigneeEmail": undefined,
       "assigneeId": 5812690998173,
       "brandId": 5812681174557,
-      "collaboratorIds": Array [],
+      "collaboratorIds": [],
       "createdAt": "2022-07-06T18:46:17Z",
       "createdOn": undefined,
       "description": "Hi there,
@@ -875,8 +875,8 @@ Thanks,
 ",
       "displayName": "Sample ticket: Meet the ticket",
       "dueAt": undefined,
-      "emailCcIds": Array [],
-      "followerIds": Array [],
+      "emailCcIds": [],
+      "followerIds": [],
       "forumTopicId": undefined,
       "groupId": 5812638858781,
       "hasIncidents": false,
@@ -885,7 +885,7 @@ Thanks,
       "organizationId": undefined,
       "priority": "normal",
       "problemId": undefined,
-      "queries": Array [
+      "queries": [
         "Hi there,
 
 I’m sending an email because I’m having a problem setting up your new product. Can you help me troubleshoot?
@@ -900,7 +900,7 @@ Thanks,
       "requesterId": 5812665774109,
       "status": "open",
       "submitterId": 5812690998173,
-      "tags": Array [
+      "tags": [
         "sample",
         "support",
         "zendesk",
@@ -908,28 +908,28 @@ Thanks,
       "type": "incident",
       "url": "https://creativice.zendesk.com/api/v2/tickets/1.json",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Record",
       ],
       "_key": "zendesk_ticket:2",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "allow_attachments": true,
             "allow_channelback": false,
             "assignee_id": 5812690998173,
             "brand_id": 5812681174557,
-            "collaborator_ids": Array [],
+            "collaborator_ids": [],
             "created_at": "2022-07-11T15:33:00Z",
-            "custom_fields": Array [],
+            "custom_fields": [],
             "description": "Test",
             "due_at": null,
-            "email_cc_ids": Array [],
+            "email_cc_ids": [],
             "external_id": null,
-            "follower_ids": Array [],
-            "followup_ids": Array [],
+            "follower_ids": [],
+            "followup_ids": [],
             "forum_topic_id": null,
             "group_id": 5812638858781,
             "has_incidents": false,
@@ -942,21 +942,21 @@ Thanks,
             "recipient": null,
             "requester_id": 5812690998173,
             "satisfaction_rating": null,
-            "sharing_agreement_ids": Array [],
+            "sharing_agreement_ids": [],
             "status": "open",
             "subject": "test ticket #1",
             "submitter_id": 5812690998173,
-            "tags": Array [],
+            "tags": [],
             "ticket_form_id": 5812670359197,
             "type": null,
             "updated_at": "2022-07-11T15:33:00Z",
             "url": "https://creativice.zendesk.com/api/v2/tickets/2.json",
-            "via": Object {
+            "via": {
               "channel": "web",
-              "source": Object {
-                "from": Object {},
+              "source": {
+                "from": {},
                 "rel": null,
-                "to": Object {},
+                "to": {},
               },
             },
           },
@@ -967,14 +967,14 @@ Thanks,
       "assigneeEmail": undefined,
       "assigneeId": 5812690998173,
       "brandId": 5812681174557,
-      "collaboratorIds": Array [],
+      "collaboratorIds": [],
       "createdAt": "2022-07-11T15:33:00Z",
       "createdOn": undefined,
       "description": "Test",
       "displayName": "test ticket #1",
       "dueAt": undefined,
-      "emailCcIds": Array [],
-      "followerIds": Array [],
+      "emailCcIds": [],
+      "followerIds": [],
       "forumTopicId": undefined,
       "groupId": 5812638858781,
       "hasIncidents": false,
@@ -983,7 +983,7 @@ Thanks,
       "organizationId": 5812638859421,
       "priority": null,
       "problemId": undefined,
-      "queries": Array [
+      "queries": [
         "Test",
       ],
       "recipient": undefined,
@@ -994,28 +994,28 @@ Thanks,
       "type": null,
       "url": "https://creativice.zendesk.com/api/v2/tickets/2.json",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Record",
       ],
       "_key": "zendesk_ticket:3",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "allow_attachments": true,
             "allow_channelback": false,
             "assignee_id": 5812690998173,
             "brand_id": 5812681174557,
-            "collaborator_ids": Array [],
+            "collaborator_ids": [],
             "created_at": "2022-07-11T17:42:31Z",
-            "custom_fields": Array [],
+            "custom_fields": [],
             "description": "Test",
             "due_at": null,
-            "email_cc_ids": Array [],
+            "email_cc_ids": [],
             "external_id": null,
-            "follower_ids": Array [],
-            "followup_ids": Array [],
+            "follower_ids": [],
+            "followup_ids": [],
             "forum_topic_id": null,
             "group_id": 5812638858781,
             "has_incidents": false,
@@ -1028,21 +1028,21 @@ Thanks,
             "recipient": null,
             "requester_id": 5812690998173,
             "satisfaction_rating": null,
-            "sharing_agreement_ids": Array [],
+            "sharing_agreement_ids": [],
             "status": "open",
             "subject": "test ticket #2",
             "submitter_id": 5812690998173,
-            "tags": Array [],
+            "tags": [],
             "ticket_form_id": 5812670359197,
             "type": null,
             "updated_at": "2022-07-11T17:42:31Z",
             "url": "https://creativice.zendesk.com/api/v2/tickets/3.json",
-            "via": Object {
+            "via": {
               "channel": "web",
-              "source": Object {
-                "from": Object {},
+              "source": {
+                "from": {},
                 "rel": null,
-                "to": Object {},
+                "to": {},
               },
             },
           },
@@ -1053,14 +1053,14 @@ Thanks,
       "assigneeEmail": undefined,
       "assigneeId": 5812690998173,
       "brandId": 5812681174557,
-      "collaboratorIds": Array [],
+      "collaboratorIds": [],
       "createdAt": "2022-07-11T17:42:31Z",
       "createdOn": undefined,
       "description": "Test",
       "displayName": "test ticket #2",
       "dueAt": undefined,
-      "emailCcIds": Array [],
-      "followerIds": Array [],
+      "emailCcIds": [],
+      "followerIds": [],
       "forumTopicId": undefined,
       "groupId": 5812638858781,
       "hasIncidents": false,
@@ -1069,7 +1069,7 @@ Thanks,
       "organizationId": 5812638859421,
       "priority": null,
       "problemId": undefined,
-      "queries": Array [
+      "queries": [
         "Test",
       ],
       "recipient": undefined,
@@ -1080,28 +1080,28 @@ Thanks,
       "type": null,
       "url": "https://creativice.zendesk.com/api/v2/tickets/3.json",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Record",
       ],
       "_key": "zendesk_ticket:4",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "allow_attachments": true,
             "allow_channelback": false,
             "assignee_id": 5812690998173,
             "brand_id": 5812681174557,
-            "collaborator_ids": Array [],
+            "collaborator_ids": [],
             "created_at": "2022-07-11T17:42:39Z",
-            "custom_fields": Array [],
+            "custom_fields": [],
             "description": "Test",
             "due_at": null,
-            "email_cc_ids": Array [],
+            "email_cc_ids": [],
             "external_id": null,
-            "follower_ids": Array [],
-            "followup_ids": Array [],
+            "follower_ids": [],
+            "followup_ids": [],
             "forum_topic_id": null,
             "group_id": 5812638858781,
             "has_incidents": false,
@@ -1114,21 +1114,21 @@ Thanks,
             "recipient": null,
             "requester_id": 5812690998173,
             "satisfaction_rating": null,
-            "sharing_agreement_ids": Array [],
+            "sharing_agreement_ids": [],
             "status": "open",
             "subject": "test ticket #3",
             "submitter_id": 5812690998173,
-            "tags": Array [],
+            "tags": [],
             "ticket_form_id": 5812670359197,
             "type": null,
             "updated_at": "2022-07-11T17:42:39Z",
             "url": "https://creativice.zendesk.com/api/v2/tickets/4.json",
-            "via": Object {
+            "via": {
               "channel": "web",
-              "source": Object {
-                "from": Object {},
+              "source": {
+                "from": {},
                 "rel": null,
-                "to": Object {},
+                "to": {},
               },
             },
           },
@@ -1139,14 +1139,14 @@ Thanks,
       "assigneeEmail": undefined,
       "assigneeId": 5812690998173,
       "brandId": 5812681174557,
-      "collaboratorIds": Array [],
+      "collaboratorIds": [],
       "createdAt": "2022-07-11T17:42:39Z",
       "createdOn": undefined,
       "description": "Test",
       "displayName": "test ticket #3",
       "dueAt": undefined,
-      "emailCcIds": Array [],
-      "followerIds": Array [],
+      "emailCcIds": [],
+      "followerIds": [],
       "forumTopicId": undefined,
       "groupId": 5812638858781,
       "hasIncidents": false,
@@ -1155,7 +1155,7 @@ Thanks,
       "organizationId": 5812638859421,
       "priority": null,
       "problemId": undefined,
-      "queries": Array [
+      "queries": [
         "Test",
       ],
       "recipient": undefined,
@@ -1166,28 +1166,28 @@ Thanks,
       "type": null,
       "url": "https://creativice.zendesk.com/api/v2/tickets/4.json",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Record",
       ],
       "_key": "zendesk_ticket:5",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "allow_attachments": true,
             "allow_channelback": false,
             "assignee_id": 5812690998173,
             "brand_id": 5812681174557,
-            "collaborator_ids": Array [],
+            "collaborator_ids": [],
             "created_at": "2022-07-11T17:42:46Z",
-            "custom_fields": Array [],
+            "custom_fields": [],
             "description": "Test",
             "due_at": null,
-            "email_cc_ids": Array [],
+            "email_cc_ids": [],
             "external_id": null,
-            "follower_ids": Array [],
-            "followup_ids": Array [],
+            "follower_ids": [],
+            "followup_ids": [],
             "forum_topic_id": null,
             "group_id": 5812638858781,
             "has_incidents": false,
@@ -1200,21 +1200,21 @@ Thanks,
             "recipient": null,
             "requester_id": 5812690998173,
             "satisfaction_rating": null,
-            "sharing_agreement_ids": Array [],
+            "sharing_agreement_ids": [],
             "status": "open",
             "subject": "test ticket #4",
             "submitter_id": 5812690998173,
-            "tags": Array [],
+            "tags": [],
             "ticket_form_id": 5812670359197,
             "type": null,
             "updated_at": "2022-07-11T17:42:46Z",
             "url": "https://creativice.zendesk.com/api/v2/tickets/5.json",
-            "via": Object {
+            "via": {
               "channel": "web",
-              "source": Object {
-                "from": Object {},
+              "source": {
+                "from": {},
                 "rel": null,
-                "to": Object {},
+                "to": {},
               },
             },
           },
@@ -1225,14 +1225,14 @@ Thanks,
       "assigneeEmail": undefined,
       "assigneeId": 5812690998173,
       "brandId": 5812681174557,
-      "collaboratorIds": Array [],
+      "collaboratorIds": [],
       "createdAt": "2022-07-11T17:42:46Z",
       "createdOn": undefined,
       "description": "Test",
       "displayName": "test ticket #4",
       "dueAt": undefined,
-      "emailCcIds": Array [],
-      "followerIds": Array [],
+      "emailCcIds": [],
+      "followerIds": [],
       "forumTopicId": undefined,
       "groupId": 5812638858781,
       "hasIncidents": false,
@@ -1241,7 +1241,7 @@ Thanks,
       "organizationId": 5812638859421,
       "priority": null,
       "problemId": undefined,
-      "queries": Array [
+      "queries": [
         "Test",
       ],
       "recipient": undefined,
@@ -1252,28 +1252,28 @@ Thanks,
       "type": null,
       "url": "https://creativice.zendesk.com/api/v2/tickets/5.json",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Record",
       ],
       "_key": "zendesk_ticket:6",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "allow_attachments": true,
             "allow_channelback": false,
             "assignee_id": 5812690998173,
             "brand_id": 5812681174557,
-            "collaborator_ids": Array [],
+            "collaborator_ids": [],
             "created_at": "2022-07-11T17:42:55Z",
-            "custom_fields": Array [],
+            "custom_fields": [],
             "description": "Test",
             "due_at": null,
-            "email_cc_ids": Array [],
+            "email_cc_ids": [],
             "external_id": null,
-            "follower_ids": Array [],
-            "followup_ids": Array [],
+            "follower_ids": [],
+            "followup_ids": [],
             "forum_topic_id": null,
             "group_id": 5812638858781,
             "has_incidents": false,
@@ -1286,21 +1286,21 @@ Thanks,
             "recipient": null,
             "requester_id": 5812690998173,
             "satisfaction_rating": null,
-            "sharing_agreement_ids": Array [],
+            "sharing_agreement_ids": [],
             "status": "open",
             "subject": "test ticket #4",
             "submitter_id": 5812690998173,
-            "tags": Array [],
+            "tags": [],
             "ticket_form_id": 5812670359197,
             "type": null,
             "updated_at": "2022-07-11T17:42:55Z",
             "url": "https://creativice.zendesk.com/api/v2/tickets/6.json",
-            "via": Object {
+            "via": {
               "channel": "web",
-              "source": Object {
-                "from": Object {},
+              "source": {
+                "from": {},
                 "rel": null,
-                "to": Object {},
+                "to": {},
               },
             },
           },
@@ -1311,14 +1311,14 @@ Thanks,
       "assigneeEmail": undefined,
       "assigneeId": 5812690998173,
       "brandId": 5812681174557,
-      "collaboratorIds": Array [],
+      "collaboratorIds": [],
       "createdAt": "2022-07-11T17:42:55Z",
       "createdOn": undefined,
       "description": "Test",
       "displayName": "test ticket #4",
       "dueAt": undefined,
-      "emailCcIds": Array [],
-      "followerIds": Array [],
+      "emailCcIds": [],
+      "followerIds": [],
       "forumTopicId": undefined,
       "groupId": 5812638858781,
       "hasIncidents": false,
@@ -1327,7 +1327,7 @@ Thanks,
       "organizationId": 5812638859421,
       "priority": null,
       "problemId": undefined,
-      "queries": Array [
+      "queries": [
         "Test",
       ],
       "recipient": undefined,
@@ -1338,15 +1338,15 @@ Thanks,
       "type": null,
       "url": "https://creativice.zendesk.com/api/v2/tickets/6.json",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
       "_key": "zendesk_group:5812638858781",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "created_at": "2022-07-06T18:46:13Z",
             "default": true,
             "deleted": false,
@@ -1371,8 +1371,8 @@ Thanks,
       "url": "https://creativice.zendesk.com/api/v2/groups/5812638858781.json",
     },
   ],
-  "collectedRelationships": Array [
-    Object {
+  "collectedRelationships": [
+    {
       "_class": "HAS",
       "_fromEntityKey": "zendesk_group:5812638858781",
       "_key": "zendesk_group:5812638858781|has|zendesk_ticket:1",
@@ -1380,7 +1380,7 @@ Thanks,
       "_type": "zendesk_group_has_ticket",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "zendesk_group:5812638858781",
       "_key": "zendesk_group:5812638858781|has|zendesk_ticket:2",
@@ -1388,7 +1388,7 @@ Thanks,
       "_type": "zendesk_group_has_ticket",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "zendesk_group:5812638858781",
       "_key": "zendesk_group:5812638858781|has|zendesk_ticket:3",
@@ -1396,7 +1396,7 @@ Thanks,
       "_type": "zendesk_group_has_ticket",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "zendesk_group:5812638858781",
       "_key": "zendesk_group:5812638858781|has|zendesk_ticket:4",
@@ -1404,7 +1404,7 @@ Thanks,
       "_type": "zendesk_group_has_ticket",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "zendesk_group:5812638858781",
       "_key": "zendesk_group:5812638858781|has|zendesk_ticket:5",
@@ -1412,7 +1412,7 @@ Thanks,
       "_type": "zendesk_group_has_ticket",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "zendesk_group:5812638858781",
       "_key": "zendesk_group:5812638858781|has|zendesk_ticket:6",
@@ -1421,7 +1421,7 @@ Thanks,
       "displayName": "HAS",
     },
   ],
-  "encounteredTypes": Array [
+  "encounteredTypes": [
     "zendesk_ticket",
     "zendesk_group",
     "zendesk_group_has_ticket",
@@ -1432,17 +1432,17 @@ Thanks,
 `;
 
 exports[`#buildTicketRequesterRelationships should collect data 1`] = `
-Object {
-  "collectedEntities": Array [
-    Object {
-      "_class": Array [
+{
+  "collectedEntities": [
+    {
+      "_class": [
         "User",
       ],
       "_key": "zendesk_user:5812665774109",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "active": true,
             "alias": null,
             "created_at": "2022-07-06T18:46:17Z",
@@ -1462,7 +1462,7 @@ Object {
             "only_private_comments": false,
             "organization_id": null,
             "phone": null,
-            "photo": Object {
+            "photo": {
               "content_type": "image/png",
               "content_url": "https://creativice.zendesk.com/system/photos/5812638919325/profile_image_5812665774109_14239391.png",
               "deleted": false,
@@ -1472,8 +1472,8 @@ Object {
               "inline": false,
               "mapped_content_url": "https://creativice.zendesk.com/system/photos/5812638919325/profile_image_5812665774109_14239391.png",
               "size": 10183,
-              "thumbnails": Array [
-                Object {
+              "thumbnails": [
+                {
                   "content_type": "image/png",
                   "content_url": "https://creativice.zendesk.com/system/photos/5812638919325/profile_image_5812665774109_14239391_thumb.png",
                   "deleted": false,
@@ -1499,13 +1499,13 @@ Object {
             "shared_phone_number": null,
             "signature": null,
             "suspended": false,
-            "tags": Array [],
+            "tags": [],
             "ticket_restriction": "requested",
             "time_zone": "Europe/Belgrade",
             "two_factor_auth_enabled": false,
             "updated_at": "2022-07-06T18:46:17Z",
             "url": "https://creativice.zendesk.com/api/v2/users/5812665774109.json",
-            "user_fields": Object {},
+            "user_fields": {},
             "verified": false,
           },
         },
@@ -1537,15 +1537,15 @@ Object {
       "username": "customer@example.com",
       "verified": false,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "zendesk_user:5812690998173",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "active": true,
             "alias": null,
             "created_at": "2022-07-06T18:46:05Z",
@@ -1575,13 +1575,13 @@ Object {
             "shared_phone_number": null,
             "signature": null,
             "suspended": false,
-            "tags": Array [],
+            "tags": [],
             "ticket_restriction": null,
             "time_zone": "Europe/Belgrade",
             "two_factor_auth_enabled": null,
             "updated_at": "2022-07-11T18:05:50Z",
             "url": "https://creativice.zendesk.com/api/v2/users/5812690998173.json",
-            "user_fields": Object {},
+            "user_fields": {},
             "verified": true,
           },
         },
@@ -1613,22 +1613,22 @@ Object {
       "username": "stefan@creativice.com",
       "verified": true,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Record",
       ],
       "_key": "zendesk_ticket:1",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "allow_attachments": true,
             "allow_channelback": false,
             "assignee_id": 5812690998173,
             "brand_id": 5812681174557,
-            "collaborator_ids": Array [],
+            "collaborator_ids": [],
             "created_at": "2022-07-06T18:46:17Z",
-            "custom_fields": Array [],
+            "custom_fields": [],
             "description": "Hi there,
 
 I’m sending an email because I’m having a problem setting up your new product. Can you help me troubleshoot?
@@ -1638,10 +1638,10 @@ Thanks,
 
 ",
             "due_at": null,
-            "email_cc_ids": Array [],
+            "email_cc_ids": [],
             "external_id": null,
-            "follower_ids": Array [],
-            "followup_ids": Array [],
+            "follower_ids": [],
+            "followup_ids": [],
             "forum_topic_id": null,
             "group_id": 5812638858781,
             "has_incidents": false,
@@ -1654,11 +1654,11 @@ Thanks,
             "recipient": null,
             "requester_id": 5812665774109,
             "satisfaction_rating": null,
-            "sharing_agreement_ids": Array [],
+            "sharing_agreement_ids": [],
             "status": "open",
             "subject": "Sample ticket: Meet the ticket",
             "submitter_id": 5812690998173,
-            "tags": Array [
+            "tags": [
               "sample",
               "support",
               "zendesk",
@@ -1667,12 +1667,12 @@ Thanks,
             "type": "incident",
             "updated_at": "2022-07-06T18:46:17Z",
             "url": "https://creativice.zendesk.com/api/v2/tickets/1.json",
-            "via": Object {
+            "via": {
               "channel": "sample_ticket",
-              "source": Object {
-                "from": Object {},
+              "source": {
+                "from": {},
                 "rel": null,
-                "to": Object {},
+                "to": {},
               },
             },
           },
@@ -1683,7 +1683,7 @@ Thanks,
       "assigneeEmail": undefined,
       "assigneeId": 5812690998173,
       "brandId": 5812681174557,
-      "collaboratorIds": Array [],
+      "collaboratorIds": [],
       "createdAt": "2022-07-06T18:46:17Z",
       "createdOn": undefined,
       "description": "Hi there,
@@ -1696,8 +1696,8 @@ Thanks,
 ",
       "displayName": "Sample ticket: Meet the ticket",
       "dueAt": undefined,
-      "emailCcIds": Array [],
-      "followerIds": Array [],
+      "emailCcIds": [],
+      "followerIds": [],
       "forumTopicId": undefined,
       "groupId": 5812638858781,
       "hasIncidents": false,
@@ -1706,7 +1706,7 @@ Thanks,
       "organizationId": undefined,
       "priority": "normal",
       "problemId": undefined,
-      "queries": Array [
+      "queries": [
         "Hi there,
 
 I’m sending an email because I’m having a problem setting up your new product. Can you help me troubleshoot?
@@ -1721,7 +1721,7 @@ Thanks,
       "requesterId": 5812665774109,
       "status": "open",
       "submitterId": 5812690998173,
-      "tags": Array [
+      "tags": [
         "sample",
         "support",
         "zendesk",
@@ -1729,28 +1729,28 @@ Thanks,
       "type": "incident",
       "url": "https://creativice.zendesk.com/api/v2/tickets/1.json",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Record",
       ],
       "_key": "zendesk_ticket:2",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "allow_attachments": true,
             "allow_channelback": false,
             "assignee_id": 5812690998173,
             "brand_id": 5812681174557,
-            "collaborator_ids": Array [],
+            "collaborator_ids": [],
             "created_at": "2022-07-11T15:33:00Z",
-            "custom_fields": Array [],
+            "custom_fields": [],
             "description": "Test",
             "due_at": null,
-            "email_cc_ids": Array [],
+            "email_cc_ids": [],
             "external_id": null,
-            "follower_ids": Array [],
-            "followup_ids": Array [],
+            "follower_ids": [],
+            "followup_ids": [],
             "forum_topic_id": null,
             "group_id": 5812638858781,
             "has_incidents": false,
@@ -1763,21 +1763,21 @@ Thanks,
             "recipient": null,
             "requester_id": 5812690998173,
             "satisfaction_rating": null,
-            "sharing_agreement_ids": Array [],
+            "sharing_agreement_ids": [],
             "status": "open",
             "subject": "test ticket #1",
             "submitter_id": 5812690998173,
-            "tags": Array [],
+            "tags": [],
             "ticket_form_id": 5812670359197,
             "type": null,
             "updated_at": "2022-07-11T15:33:00Z",
             "url": "https://creativice.zendesk.com/api/v2/tickets/2.json",
-            "via": Object {
+            "via": {
               "channel": "web",
-              "source": Object {
-                "from": Object {},
+              "source": {
+                "from": {},
                 "rel": null,
-                "to": Object {},
+                "to": {},
               },
             },
           },
@@ -1788,14 +1788,14 @@ Thanks,
       "assigneeEmail": undefined,
       "assigneeId": 5812690998173,
       "brandId": 5812681174557,
-      "collaboratorIds": Array [],
+      "collaboratorIds": [],
       "createdAt": "2022-07-11T15:33:00Z",
       "createdOn": undefined,
       "description": "Test",
       "displayName": "test ticket #1",
       "dueAt": undefined,
-      "emailCcIds": Array [],
-      "followerIds": Array [],
+      "emailCcIds": [],
+      "followerIds": [],
       "forumTopicId": undefined,
       "groupId": 5812638858781,
       "hasIncidents": false,
@@ -1804,7 +1804,7 @@ Thanks,
       "organizationId": 5812638859421,
       "priority": null,
       "problemId": undefined,
-      "queries": Array [
+      "queries": [
         "Test",
       ],
       "recipient": undefined,
@@ -1815,28 +1815,28 @@ Thanks,
       "type": null,
       "url": "https://creativice.zendesk.com/api/v2/tickets/2.json",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Record",
       ],
       "_key": "zendesk_ticket:3",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "allow_attachments": true,
             "allow_channelback": false,
             "assignee_id": 5812690998173,
             "brand_id": 5812681174557,
-            "collaborator_ids": Array [],
+            "collaborator_ids": [],
             "created_at": "2022-07-11T17:42:31Z",
-            "custom_fields": Array [],
+            "custom_fields": [],
             "description": "Test",
             "due_at": null,
-            "email_cc_ids": Array [],
+            "email_cc_ids": [],
             "external_id": null,
-            "follower_ids": Array [],
-            "followup_ids": Array [],
+            "follower_ids": [],
+            "followup_ids": [],
             "forum_topic_id": null,
             "group_id": 5812638858781,
             "has_incidents": false,
@@ -1849,21 +1849,21 @@ Thanks,
             "recipient": null,
             "requester_id": 5812690998173,
             "satisfaction_rating": null,
-            "sharing_agreement_ids": Array [],
+            "sharing_agreement_ids": [],
             "status": "open",
             "subject": "test ticket #2",
             "submitter_id": 5812690998173,
-            "tags": Array [],
+            "tags": [],
             "ticket_form_id": 5812670359197,
             "type": null,
             "updated_at": "2022-07-11T17:42:31Z",
             "url": "https://creativice.zendesk.com/api/v2/tickets/3.json",
-            "via": Object {
+            "via": {
               "channel": "web",
-              "source": Object {
-                "from": Object {},
+              "source": {
+                "from": {},
                 "rel": null,
-                "to": Object {},
+                "to": {},
               },
             },
           },
@@ -1874,14 +1874,14 @@ Thanks,
       "assigneeEmail": undefined,
       "assigneeId": 5812690998173,
       "brandId": 5812681174557,
-      "collaboratorIds": Array [],
+      "collaboratorIds": [],
       "createdAt": "2022-07-11T17:42:31Z",
       "createdOn": undefined,
       "description": "Test",
       "displayName": "test ticket #2",
       "dueAt": undefined,
-      "emailCcIds": Array [],
-      "followerIds": Array [],
+      "emailCcIds": [],
+      "followerIds": [],
       "forumTopicId": undefined,
       "groupId": 5812638858781,
       "hasIncidents": false,
@@ -1890,7 +1890,7 @@ Thanks,
       "organizationId": 5812638859421,
       "priority": null,
       "problemId": undefined,
-      "queries": Array [
+      "queries": [
         "Test",
       ],
       "recipient": undefined,
@@ -1901,28 +1901,28 @@ Thanks,
       "type": null,
       "url": "https://creativice.zendesk.com/api/v2/tickets/3.json",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Record",
       ],
       "_key": "zendesk_ticket:4",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "allow_attachments": true,
             "allow_channelback": false,
             "assignee_id": 5812690998173,
             "brand_id": 5812681174557,
-            "collaborator_ids": Array [],
+            "collaborator_ids": [],
             "created_at": "2022-07-11T17:42:39Z",
-            "custom_fields": Array [],
+            "custom_fields": [],
             "description": "Test",
             "due_at": null,
-            "email_cc_ids": Array [],
+            "email_cc_ids": [],
             "external_id": null,
-            "follower_ids": Array [],
-            "followup_ids": Array [],
+            "follower_ids": [],
+            "followup_ids": [],
             "forum_topic_id": null,
             "group_id": 5812638858781,
             "has_incidents": false,
@@ -1935,21 +1935,21 @@ Thanks,
             "recipient": null,
             "requester_id": 5812690998173,
             "satisfaction_rating": null,
-            "sharing_agreement_ids": Array [],
+            "sharing_agreement_ids": [],
             "status": "open",
             "subject": "test ticket #3",
             "submitter_id": 5812690998173,
-            "tags": Array [],
+            "tags": [],
             "ticket_form_id": 5812670359197,
             "type": null,
             "updated_at": "2022-07-11T17:42:39Z",
             "url": "https://creativice.zendesk.com/api/v2/tickets/4.json",
-            "via": Object {
+            "via": {
               "channel": "web",
-              "source": Object {
-                "from": Object {},
+              "source": {
+                "from": {},
                 "rel": null,
-                "to": Object {},
+                "to": {},
               },
             },
           },
@@ -1960,14 +1960,14 @@ Thanks,
       "assigneeEmail": undefined,
       "assigneeId": 5812690998173,
       "brandId": 5812681174557,
-      "collaboratorIds": Array [],
+      "collaboratorIds": [],
       "createdAt": "2022-07-11T17:42:39Z",
       "createdOn": undefined,
       "description": "Test",
       "displayName": "test ticket #3",
       "dueAt": undefined,
-      "emailCcIds": Array [],
-      "followerIds": Array [],
+      "emailCcIds": [],
+      "followerIds": [],
       "forumTopicId": undefined,
       "groupId": 5812638858781,
       "hasIncidents": false,
@@ -1976,7 +1976,7 @@ Thanks,
       "organizationId": 5812638859421,
       "priority": null,
       "problemId": undefined,
-      "queries": Array [
+      "queries": [
         "Test",
       ],
       "recipient": undefined,
@@ -1987,28 +1987,28 @@ Thanks,
       "type": null,
       "url": "https://creativice.zendesk.com/api/v2/tickets/4.json",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Record",
       ],
       "_key": "zendesk_ticket:5",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "allow_attachments": true,
             "allow_channelback": false,
             "assignee_id": 5812690998173,
             "brand_id": 5812681174557,
-            "collaborator_ids": Array [],
+            "collaborator_ids": [],
             "created_at": "2022-07-11T17:42:46Z",
-            "custom_fields": Array [],
+            "custom_fields": [],
             "description": "Test",
             "due_at": null,
-            "email_cc_ids": Array [],
+            "email_cc_ids": [],
             "external_id": null,
-            "follower_ids": Array [],
-            "followup_ids": Array [],
+            "follower_ids": [],
+            "followup_ids": [],
             "forum_topic_id": null,
             "group_id": 5812638858781,
             "has_incidents": false,
@@ -2021,21 +2021,21 @@ Thanks,
             "recipient": null,
             "requester_id": 5812690998173,
             "satisfaction_rating": null,
-            "sharing_agreement_ids": Array [],
+            "sharing_agreement_ids": [],
             "status": "open",
             "subject": "test ticket #4",
             "submitter_id": 5812690998173,
-            "tags": Array [],
+            "tags": [],
             "ticket_form_id": 5812670359197,
             "type": null,
             "updated_at": "2022-07-11T17:42:46Z",
             "url": "https://creativice.zendesk.com/api/v2/tickets/5.json",
-            "via": Object {
+            "via": {
               "channel": "web",
-              "source": Object {
-                "from": Object {},
+              "source": {
+                "from": {},
                 "rel": null,
-                "to": Object {},
+                "to": {},
               },
             },
           },
@@ -2046,14 +2046,14 @@ Thanks,
       "assigneeEmail": undefined,
       "assigneeId": 5812690998173,
       "brandId": 5812681174557,
-      "collaboratorIds": Array [],
+      "collaboratorIds": [],
       "createdAt": "2022-07-11T17:42:46Z",
       "createdOn": undefined,
       "description": "Test",
       "displayName": "test ticket #4",
       "dueAt": undefined,
-      "emailCcIds": Array [],
-      "followerIds": Array [],
+      "emailCcIds": [],
+      "followerIds": [],
       "forumTopicId": undefined,
       "groupId": 5812638858781,
       "hasIncidents": false,
@@ -2062,7 +2062,7 @@ Thanks,
       "organizationId": 5812638859421,
       "priority": null,
       "problemId": undefined,
-      "queries": Array [
+      "queries": [
         "Test",
       ],
       "recipient": undefined,
@@ -2073,28 +2073,28 @@ Thanks,
       "type": null,
       "url": "https://creativice.zendesk.com/api/v2/tickets/5.json",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Record",
       ],
       "_key": "zendesk_ticket:6",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "allow_attachments": true,
             "allow_channelback": false,
             "assignee_id": 5812690998173,
             "brand_id": 5812681174557,
-            "collaborator_ids": Array [],
+            "collaborator_ids": [],
             "created_at": "2022-07-11T17:42:55Z",
-            "custom_fields": Array [],
+            "custom_fields": [],
             "description": "Test",
             "due_at": null,
-            "email_cc_ids": Array [],
+            "email_cc_ids": [],
             "external_id": null,
-            "follower_ids": Array [],
-            "followup_ids": Array [],
+            "follower_ids": [],
+            "followup_ids": [],
             "forum_topic_id": null,
             "group_id": 5812638858781,
             "has_incidents": false,
@@ -2107,21 +2107,21 @@ Thanks,
             "recipient": null,
             "requester_id": 5812690998173,
             "satisfaction_rating": null,
-            "sharing_agreement_ids": Array [],
+            "sharing_agreement_ids": [],
             "status": "open",
             "subject": "test ticket #4",
             "submitter_id": 5812690998173,
-            "tags": Array [],
+            "tags": [],
             "ticket_form_id": 5812670359197,
             "type": null,
             "updated_at": "2022-07-11T17:42:55Z",
             "url": "https://creativice.zendesk.com/api/v2/tickets/6.json",
-            "via": Object {
+            "via": {
               "channel": "web",
-              "source": Object {
-                "from": Object {},
+              "source": {
+                "from": {},
                 "rel": null,
-                "to": Object {},
+                "to": {},
               },
             },
           },
@@ -2132,14 +2132,14 @@ Thanks,
       "assigneeEmail": undefined,
       "assigneeId": 5812690998173,
       "brandId": 5812681174557,
-      "collaboratorIds": Array [],
+      "collaboratorIds": [],
       "createdAt": "2022-07-11T17:42:55Z",
       "createdOn": undefined,
       "description": "Test",
       "displayName": "test ticket #4",
       "dueAt": undefined,
-      "emailCcIds": Array [],
-      "followerIds": Array [],
+      "emailCcIds": [],
+      "followerIds": [],
       "forumTopicId": undefined,
       "groupId": 5812638858781,
       "hasIncidents": false,
@@ -2148,7 +2148,7 @@ Thanks,
       "organizationId": 5812638859421,
       "priority": null,
       "problemId": undefined,
-      "queries": Array [
+      "queries": [
         "Test",
       ],
       "recipient": undefined,
@@ -2160,8 +2160,8 @@ Thanks,
       "url": "https://creativice.zendesk.com/api/v2/tickets/6.json",
     },
   ],
-  "collectedRelationships": Array [
-    Object {
+  "collectedRelationships": [
+    {
       "_class": "OPENED",
       "_fromEntityKey": "zendesk_user:5812665774109",
       "_key": "zendesk_user:5812665774109|opened|zendesk_ticket:1",
@@ -2169,7 +2169,7 @@ Thanks,
       "_type": "zendesk_user_opened_ticket",
       "displayName": "OPENED",
     },
-    Object {
+    {
       "_class": "OPENED",
       "_fromEntityKey": "zendesk_user:5812690998173",
       "_key": "zendesk_user:5812690998173|opened|zendesk_ticket:2",
@@ -2177,7 +2177,7 @@ Thanks,
       "_type": "zendesk_user_opened_ticket",
       "displayName": "OPENED",
     },
-    Object {
+    {
       "_class": "OPENED",
       "_fromEntityKey": "zendesk_user:5812690998173",
       "_key": "zendesk_user:5812690998173|opened|zendesk_ticket:3",
@@ -2185,7 +2185,7 @@ Thanks,
       "_type": "zendesk_user_opened_ticket",
       "displayName": "OPENED",
     },
-    Object {
+    {
       "_class": "OPENED",
       "_fromEntityKey": "zendesk_user:5812690998173",
       "_key": "zendesk_user:5812690998173|opened|zendesk_ticket:4",
@@ -2193,7 +2193,7 @@ Thanks,
       "_type": "zendesk_user_opened_ticket",
       "displayName": "OPENED",
     },
-    Object {
+    {
       "_class": "OPENED",
       "_fromEntityKey": "zendesk_user:5812690998173",
       "_key": "zendesk_user:5812690998173|opened|zendesk_ticket:5",
@@ -2201,7 +2201,7 @@ Thanks,
       "_type": "zendesk_user_opened_ticket",
       "displayName": "OPENED",
     },
-    Object {
+    {
       "_class": "OPENED",
       "_fromEntityKey": "zendesk_user:5812690998173",
       "_key": "zendesk_user:5812690998173|opened|zendesk_ticket:6",
@@ -2210,7 +2210,7 @@ Thanks,
       "displayName": "OPENED",
     },
   ],
-  "encounteredTypes": Array [
+  "encounteredTypes": [
     "zendesk_user",
     "zendesk_ticket",
     "zendesk_user_opened_ticket",
@@ -2221,24 +2221,24 @@ Thanks,
 `;
 
 exports[`#fetchTickets should collect data 1`] = `
-Object {
-  "collectedEntities": Array [
-    Object {
-      "_class": Array [
+{
+  "collectedEntities": [
+    {
+      "_class": [
         "Record",
       ],
       "_key": "zendesk_ticket:1",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "allow_attachments": true,
             "allow_channelback": false,
             "assignee_id": 5812690998173,
             "brand_id": 5812681174557,
-            "collaborator_ids": Array [],
+            "collaborator_ids": [],
             "created_at": "2022-07-06T18:46:17Z",
-            "custom_fields": Array [],
+            "custom_fields": [],
             "description": "Hi there,
 
 I’m sending an email because I’m having a problem setting up your new product. Can you help me troubleshoot?
@@ -2248,10 +2248,10 @@ Thanks,
 
 ",
             "due_at": null,
-            "email_cc_ids": Array [],
+            "email_cc_ids": [],
             "external_id": null,
-            "follower_ids": Array [],
-            "followup_ids": Array [],
+            "follower_ids": [],
+            "followup_ids": [],
             "forum_topic_id": null,
             "group_id": 5812638858781,
             "has_incidents": false,
@@ -2264,11 +2264,11 @@ Thanks,
             "recipient": null,
             "requester_id": 5812665774109,
             "satisfaction_rating": null,
-            "sharing_agreement_ids": Array [],
+            "sharing_agreement_ids": [],
             "status": "open",
             "subject": "Sample ticket: Meet the ticket",
             "submitter_id": 5812690998173,
-            "tags": Array [
+            "tags": [
               "sample",
               "support",
               "zendesk",
@@ -2277,12 +2277,12 @@ Thanks,
             "type": "incident",
             "updated_at": "2022-07-06T18:46:17Z",
             "url": "https://creativice.zendesk.com/api/v2/tickets/1.json",
-            "via": Object {
+            "via": {
               "channel": "sample_ticket",
-              "source": Object {
-                "from": Object {},
+              "source": {
+                "from": {},
                 "rel": null,
-                "to": Object {},
+                "to": {},
               },
             },
           },
@@ -2293,7 +2293,7 @@ Thanks,
       "assigneeEmail": undefined,
       "assigneeId": 5812690998173,
       "brandId": 5812681174557,
-      "collaboratorIds": Array [],
+      "collaboratorIds": [],
       "createdAt": "2022-07-06T18:46:17Z",
       "createdOn": undefined,
       "description": "Hi there,
@@ -2306,8 +2306,8 @@ Thanks,
 ",
       "displayName": "Sample ticket: Meet the ticket",
       "dueAt": undefined,
-      "emailCcIds": Array [],
-      "followerIds": Array [],
+      "emailCcIds": [],
+      "followerIds": [],
       "forumTopicId": undefined,
       "groupId": 5812638858781,
       "hasIncidents": false,
@@ -2316,7 +2316,7 @@ Thanks,
       "organizationId": undefined,
       "priority": "normal",
       "problemId": undefined,
-      "queries": Array [
+      "queries": [
         "Hi there,
 
 I’m sending an email because I’m having a problem setting up your new product. Can you help me troubleshoot?
@@ -2331,7 +2331,7 @@ Thanks,
       "requesterId": 5812665774109,
       "status": "open",
       "submitterId": 5812690998173,
-      "tags": Array [
+      "tags": [
         "sample",
         "support",
         "zendesk",
@@ -2339,28 +2339,28 @@ Thanks,
       "type": "incident",
       "url": "https://creativice.zendesk.com/api/v2/tickets/1.json",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Record",
       ],
       "_key": "zendesk_ticket:2",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "allow_attachments": true,
             "allow_channelback": false,
             "assignee_id": 5812690998173,
             "brand_id": 5812681174557,
-            "collaborator_ids": Array [],
+            "collaborator_ids": [],
             "created_at": "2022-07-11T15:33:00Z",
-            "custom_fields": Array [],
+            "custom_fields": [],
             "description": "Test",
             "due_at": null,
-            "email_cc_ids": Array [],
+            "email_cc_ids": [],
             "external_id": null,
-            "follower_ids": Array [],
-            "followup_ids": Array [],
+            "follower_ids": [],
+            "followup_ids": [],
             "forum_topic_id": null,
             "group_id": 5812638858781,
             "has_incidents": false,
@@ -2373,21 +2373,21 @@ Thanks,
             "recipient": null,
             "requester_id": 5812690998173,
             "satisfaction_rating": null,
-            "sharing_agreement_ids": Array [],
+            "sharing_agreement_ids": [],
             "status": "open",
             "subject": "test ticket #1",
             "submitter_id": 5812690998173,
-            "tags": Array [],
+            "tags": [],
             "ticket_form_id": 5812670359197,
             "type": null,
             "updated_at": "2022-07-11T15:33:00Z",
             "url": "https://creativice.zendesk.com/api/v2/tickets/2.json",
-            "via": Object {
+            "via": {
               "channel": "web",
-              "source": Object {
-                "from": Object {},
+              "source": {
+                "from": {},
                 "rel": null,
-                "to": Object {},
+                "to": {},
               },
             },
           },
@@ -2398,14 +2398,14 @@ Thanks,
       "assigneeEmail": undefined,
       "assigneeId": 5812690998173,
       "brandId": 5812681174557,
-      "collaboratorIds": Array [],
+      "collaboratorIds": [],
       "createdAt": "2022-07-11T15:33:00Z",
       "createdOn": undefined,
       "description": "Test",
       "displayName": "test ticket #1",
       "dueAt": undefined,
-      "emailCcIds": Array [],
-      "followerIds": Array [],
+      "emailCcIds": [],
+      "followerIds": [],
       "forumTopicId": undefined,
       "groupId": 5812638858781,
       "hasIncidents": false,
@@ -2414,7 +2414,7 @@ Thanks,
       "organizationId": 5812638859421,
       "priority": null,
       "problemId": undefined,
-      "queries": Array [
+      "queries": [
         "Test",
       ],
       "recipient": undefined,
@@ -2425,28 +2425,28 @@ Thanks,
       "type": null,
       "url": "https://creativice.zendesk.com/api/v2/tickets/2.json",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Record",
       ],
       "_key": "zendesk_ticket:3",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "allow_attachments": true,
             "allow_channelback": false,
             "assignee_id": 5812690998173,
             "brand_id": 5812681174557,
-            "collaborator_ids": Array [],
+            "collaborator_ids": [],
             "created_at": "2022-07-11T17:42:31Z",
-            "custom_fields": Array [],
+            "custom_fields": [],
             "description": "Test",
             "due_at": null,
-            "email_cc_ids": Array [],
+            "email_cc_ids": [],
             "external_id": null,
-            "follower_ids": Array [],
-            "followup_ids": Array [],
+            "follower_ids": [],
+            "followup_ids": [],
             "forum_topic_id": null,
             "group_id": 5812638858781,
             "has_incidents": false,
@@ -2459,21 +2459,21 @@ Thanks,
             "recipient": null,
             "requester_id": 5812690998173,
             "satisfaction_rating": null,
-            "sharing_agreement_ids": Array [],
+            "sharing_agreement_ids": [],
             "status": "open",
             "subject": "test ticket #2",
             "submitter_id": 5812690998173,
-            "tags": Array [],
+            "tags": [],
             "ticket_form_id": 5812670359197,
             "type": null,
             "updated_at": "2022-07-11T17:42:31Z",
             "url": "https://creativice.zendesk.com/api/v2/tickets/3.json",
-            "via": Object {
+            "via": {
               "channel": "web",
-              "source": Object {
-                "from": Object {},
+              "source": {
+                "from": {},
                 "rel": null,
-                "to": Object {},
+                "to": {},
               },
             },
           },
@@ -2484,14 +2484,14 @@ Thanks,
       "assigneeEmail": undefined,
       "assigneeId": 5812690998173,
       "brandId": 5812681174557,
-      "collaboratorIds": Array [],
+      "collaboratorIds": [],
       "createdAt": "2022-07-11T17:42:31Z",
       "createdOn": undefined,
       "description": "Test",
       "displayName": "test ticket #2",
       "dueAt": undefined,
-      "emailCcIds": Array [],
-      "followerIds": Array [],
+      "emailCcIds": [],
+      "followerIds": [],
       "forumTopicId": undefined,
       "groupId": 5812638858781,
       "hasIncidents": false,
@@ -2500,7 +2500,7 @@ Thanks,
       "organizationId": 5812638859421,
       "priority": null,
       "problemId": undefined,
-      "queries": Array [
+      "queries": [
         "Test",
       ],
       "recipient": undefined,
@@ -2511,28 +2511,28 @@ Thanks,
       "type": null,
       "url": "https://creativice.zendesk.com/api/v2/tickets/3.json",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Record",
       ],
       "_key": "zendesk_ticket:4",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "allow_attachments": true,
             "allow_channelback": false,
             "assignee_id": 5812690998173,
             "brand_id": 5812681174557,
-            "collaborator_ids": Array [],
+            "collaborator_ids": [],
             "created_at": "2022-07-11T17:42:39Z",
-            "custom_fields": Array [],
+            "custom_fields": [],
             "description": "Test",
             "due_at": null,
-            "email_cc_ids": Array [],
+            "email_cc_ids": [],
             "external_id": null,
-            "follower_ids": Array [],
-            "followup_ids": Array [],
+            "follower_ids": [],
+            "followup_ids": [],
             "forum_topic_id": null,
             "group_id": 5812638858781,
             "has_incidents": false,
@@ -2545,21 +2545,21 @@ Thanks,
             "recipient": null,
             "requester_id": 5812690998173,
             "satisfaction_rating": null,
-            "sharing_agreement_ids": Array [],
+            "sharing_agreement_ids": [],
             "status": "open",
             "subject": "test ticket #3",
             "submitter_id": 5812690998173,
-            "tags": Array [],
+            "tags": [],
             "ticket_form_id": 5812670359197,
             "type": null,
             "updated_at": "2022-07-11T17:42:39Z",
             "url": "https://creativice.zendesk.com/api/v2/tickets/4.json",
-            "via": Object {
+            "via": {
               "channel": "web",
-              "source": Object {
-                "from": Object {},
+              "source": {
+                "from": {},
                 "rel": null,
-                "to": Object {},
+                "to": {},
               },
             },
           },
@@ -2570,14 +2570,14 @@ Thanks,
       "assigneeEmail": undefined,
       "assigneeId": 5812690998173,
       "brandId": 5812681174557,
-      "collaboratorIds": Array [],
+      "collaboratorIds": [],
       "createdAt": "2022-07-11T17:42:39Z",
       "createdOn": undefined,
       "description": "Test",
       "displayName": "test ticket #3",
       "dueAt": undefined,
-      "emailCcIds": Array [],
-      "followerIds": Array [],
+      "emailCcIds": [],
+      "followerIds": [],
       "forumTopicId": undefined,
       "groupId": 5812638858781,
       "hasIncidents": false,
@@ -2586,7 +2586,7 @@ Thanks,
       "organizationId": 5812638859421,
       "priority": null,
       "problemId": undefined,
-      "queries": Array [
+      "queries": [
         "Test",
       ],
       "recipient": undefined,
@@ -2597,28 +2597,28 @@ Thanks,
       "type": null,
       "url": "https://creativice.zendesk.com/api/v2/tickets/4.json",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Record",
       ],
       "_key": "zendesk_ticket:5",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "allow_attachments": true,
             "allow_channelback": false,
             "assignee_id": 5812690998173,
             "brand_id": 5812681174557,
-            "collaborator_ids": Array [],
+            "collaborator_ids": [],
             "created_at": "2022-07-11T17:42:46Z",
-            "custom_fields": Array [],
+            "custom_fields": [],
             "description": "Test",
             "due_at": null,
-            "email_cc_ids": Array [],
+            "email_cc_ids": [],
             "external_id": null,
-            "follower_ids": Array [],
-            "followup_ids": Array [],
+            "follower_ids": [],
+            "followup_ids": [],
             "forum_topic_id": null,
             "group_id": 5812638858781,
             "has_incidents": false,
@@ -2631,21 +2631,21 @@ Thanks,
             "recipient": null,
             "requester_id": 5812690998173,
             "satisfaction_rating": null,
-            "sharing_agreement_ids": Array [],
+            "sharing_agreement_ids": [],
             "status": "open",
             "subject": "test ticket #4",
             "submitter_id": 5812690998173,
-            "tags": Array [],
+            "tags": [],
             "ticket_form_id": 5812670359197,
             "type": null,
             "updated_at": "2022-07-11T17:42:46Z",
             "url": "https://creativice.zendesk.com/api/v2/tickets/5.json",
-            "via": Object {
+            "via": {
               "channel": "web",
-              "source": Object {
-                "from": Object {},
+              "source": {
+                "from": {},
                 "rel": null,
-                "to": Object {},
+                "to": {},
               },
             },
           },
@@ -2656,14 +2656,14 @@ Thanks,
       "assigneeEmail": undefined,
       "assigneeId": 5812690998173,
       "brandId": 5812681174557,
-      "collaboratorIds": Array [],
+      "collaboratorIds": [],
       "createdAt": "2022-07-11T17:42:46Z",
       "createdOn": undefined,
       "description": "Test",
       "displayName": "test ticket #4",
       "dueAt": undefined,
-      "emailCcIds": Array [],
-      "followerIds": Array [],
+      "emailCcIds": [],
+      "followerIds": [],
       "forumTopicId": undefined,
       "groupId": 5812638858781,
       "hasIncidents": false,
@@ -2672,7 +2672,7 @@ Thanks,
       "organizationId": 5812638859421,
       "priority": null,
       "problemId": undefined,
-      "queries": Array [
+      "queries": [
         "Test",
       ],
       "recipient": undefined,
@@ -2683,28 +2683,28 @@ Thanks,
       "type": null,
       "url": "https://creativice.zendesk.com/api/v2/tickets/5.json",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Record",
       ],
       "_key": "zendesk_ticket:6",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "allow_attachments": true,
             "allow_channelback": false,
             "assignee_id": 5812690998173,
             "brand_id": 5812681174557,
-            "collaborator_ids": Array [],
+            "collaborator_ids": [],
             "created_at": "2022-07-11T17:42:55Z",
-            "custom_fields": Array [],
+            "custom_fields": [],
             "description": "Test",
             "due_at": null,
-            "email_cc_ids": Array [],
+            "email_cc_ids": [],
             "external_id": null,
-            "follower_ids": Array [],
-            "followup_ids": Array [],
+            "follower_ids": [],
+            "followup_ids": [],
             "forum_topic_id": null,
             "group_id": 5812638858781,
             "has_incidents": false,
@@ -2717,21 +2717,21 @@ Thanks,
             "recipient": null,
             "requester_id": 5812690998173,
             "satisfaction_rating": null,
-            "sharing_agreement_ids": Array [],
+            "sharing_agreement_ids": [],
             "status": "open",
             "subject": "test ticket #4",
             "submitter_id": 5812690998173,
-            "tags": Array [],
+            "tags": [],
             "ticket_form_id": 5812670359197,
             "type": null,
             "updated_at": "2022-07-11T17:42:55Z",
             "url": "https://creativice.zendesk.com/api/v2/tickets/6.json",
-            "via": Object {
+            "via": {
               "channel": "web",
-              "source": Object {
-                "from": Object {},
+              "source": {
+                "from": {},
                 "rel": null,
-                "to": Object {},
+                "to": {},
               },
             },
           },
@@ -2742,14 +2742,14 @@ Thanks,
       "assigneeEmail": undefined,
       "assigneeId": 5812690998173,
       "brandId": 5812681174557,
-      "collaboratorIds": Array [],
+      "collaboratorIds": [],
       "createdAt": "2022-07-11T17:42:55Z",
       "createdOn": undefined,
       "description": "Test",
       "displayName": "test ticket #4",
       "dueAt": undefined,
-      "emailCcIds": Array [],
-      "followerIds": Array [],
+      "emailCcIds": [],
+      "followerIds": [],
       "forumTopicId": undefined,
       "groupId": 5812638858781,
       "hasIncidents": false,
@@ -2758,7 +2758,7 @@ Thanks,
       "organizationId": 5812638859421,
       "priority": null,
       "problemId": undefined,
-      "queries": Array [
+      "queries": [
         "Test",
       ],
       "recipient": undefined,
@@ -2770,8 +2770,8 @@ Thanks,
       "url": "https://creativice.zendesk.com/api/v2/tickets/6.json",
     },
   ],
-  "collectedRelationships": Array [],
-  "encounteredTypes": Array [
+  "collectedRelationships": [],
+  "encounteredTypes": [
     "zendesk_ticket",
   ],
   "numCollectedEntities": 6,
