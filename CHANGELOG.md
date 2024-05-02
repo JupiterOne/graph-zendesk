@@ -8,6 +8,12 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [1.3.0] - 2024-05-02
+
+### Added
+
+- Updated integration to Node 18 and enabled ingest sources feature.
+
 ## [1.2.0] - 2022-09-07
 
 ### Added
