@@ -5,7 +5,7 @@ import {
 import { createAPIClient } from '../../client';
 import { IntegrationConfig } from '../../config';
 import { createGroupEntity } from './converters';
-import { Entities, IntegrationSteps } from '../constants';
+import { Entities, IngestionSources, IntegrationSteps } from '../constants';
 
 // Oauth scope: 'read'
 export async function fetchGroups({
@@ -23,6 +23,7 @@ export async function fetchGroups({
 export const groupSteps: IntegrationStep<IntegrationConfig>[] = [
   {
     id: IntegrationSteps.GROUPS,
+    ingestionSourceId: IngestionSources.GROUPS,
     name: 'Fetch Groups',
     entities: [Entities.GROUP],
     relationships: [],

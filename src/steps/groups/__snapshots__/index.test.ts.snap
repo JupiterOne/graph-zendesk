@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#fetchGroups should collect data 1`] = `
-Object {
-  "collectedEntities": Array [
-    Object {
-      "_class": Array [
+{
+  "collectedEntities": [
+    {
+      "_class": [
         "Account",
       ],
       "_key": "zendesk_account:creativice",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "multiproduct": true,
             "name": "Creativice",
             "owner_id": 5812690998173,
@@ -30,15 +30,15 @@ Object {
       "displayName": "Creativice",
       "name": "Creativice",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
       "_key": "zendesk_group:5812638858781",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "created_at": "2022-07-06T18:46:13Z",
             "default": true,
             "deleted": false,
@@ -63,8 +63,8 @@ Object {
       "url": "https://creativice.zendesk.com/api/v2/groups/5812638858781.json",
     },
   ],
-  "collectedRelationships": Array [],
-  "encounteredTypes": Array [
+  "collectedRelationships": [],
+  "encounteredTypes": [
     "zendesk_account",
     "zendesk_group",
   ],

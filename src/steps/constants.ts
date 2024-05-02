@@ -104,3 +104,10 @@ export const Relationships: Record<
     targetType: Entities.TICKET._type,
   },
 };
+
+export const IngestionSources = {
+  GROUPS: 'groups',
+  ORGANIZATIONS: 'organizations',
+  TICKETS: 'tickets',
+  USERS: 'users',
+};
