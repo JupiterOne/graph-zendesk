@@ -31,6 +31,9 @@ export const instanceConfigFields: IntegrationInstanceConfigFieldMap = {
   omitTicketDescription: {
     type: 'boolean',
   },
+  userRoles: {
+    type: 'string',
+  },
 };
 
 /**
@@ -41,6 +44,7 @@ export interface IntegrationConfig extends IntegrationInstanceConfig {
   zendeskAccessToken: string;
   zendeskSubdomain: string;
   omitTicketDescription: boolean;
+  userRoles: string;
 }
 
 export async function validateInvocation(
@@ -50,7 +54,26 @@ export async function validateInvocation(
 
   if (!config.zendeskAccessToken || !config.zendeskSubdomain) {
     throw new IntegrationValidationError(
-      'Config requires all of {zendeskAccessToken,zendeskSubdomain}',
+      'Config requires all of {zendeskAccessToken, zendeskSubdomain}',
+    );
+  }
+
+  // Validate userRoles
+  if (!config.userRoles) {
+    throw new IntegrationValidationError(
+      'Config requires userRoles to be specified',
+    );
+  }
+
+  const userRolesArray = config.userRoles.split(',').map((role) => role.trim());
+  const validRoles = ['end-user', 'agent', 'admin'];
+  const invalidRoles = userRolesArray.filter(
+    (role) => !validRoles.includes(role),
+  );
+
+  if (invalidRoles.length > 0) {
+    throw new IntegrationValidationError(
+      `Invalid userRoles found: ${invalidRoles.join(', ')}. Valid roles are: ${validRoles.join(', ')}.`,
     );
   }
 

@@ -21,11 +21,12 @@ export async function fetchUsers({
   jobState,
 }: IntegrationStepExecutionContext<IntegrationConfig>) {
   const apiClient = createAPIClient(instance.config);
+  const { userRoles } = instance.config;
 
   await apiClient.iterateUsers(async (user) => {
     const userEntity = createUserEntity(user);
     await jobState.addEntity(userEntity);
-  });
+  }, userRoles);
 }
 
 export async function buildUserGroupRelationships({
