@@ -58,24 +58,14 @@ export async function validateInvocation(
     );
   }
 
-  // Validate userRoles
+  // Check if userRoles is provided
   if (!config.userRoles) {
     throw new IntegrationValidationError(
       'Config requires userRoles to be specified',
     );
   }
 
-  const userRolesArray = config.userRoles.split(',').map((role) => role.trim());
-  const validRoles = ['end-user', 'agent', 'admin'];
-  const invalidRoles = userRolesArray.filter(
-    (role) => !validRoles.includes(role),
-  );
-
-  if (invalidRoles.length > 0) {
-    throw new IntegrationValidationError(
-      `Invalid userRoles found: ${invalidRoles.join(', ')}. Valid roles are: ${validRoles.join(', ')}.`,
-    );
-  }
+  // Continue with other validations or operations here
 
   const apiClient = createAPIClient(config);
   await apiClient.verifyAuthentication();
