@@ -8,10 +8,10 @@ if (process.env.LOAD_ENV) {
   });
 }
 
-const DEFAULT_SUBDOMAIN = 'creativice';
+const DEFAULT_SUBDOMAIN = 'metronsecurity';
 const ZENDESK_ACCESS_TOKEN = 'dummy-zendesk-access-token';
 const DEFAULT_OMIT_DESCRIPTION = false;
-const DEFAULT_USER_ROLE = 'end-user';
+const DEFAULT_USER_ROLE = 'end-user, admin, agent';
 
 export const integrationConfig: IntegrationConfig = {
   zendeskSubdomain: process.env.ZENDESK_SUBDOMAIN || DEFAULT_SUBDOMAIN,
