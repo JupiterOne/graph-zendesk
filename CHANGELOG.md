@@ -12,7 +12,8 @@ and this project adheres to
 
 ### Added
 
-- Added filter for step `fetch-users` to filter on User Roles , example: end-user, admin, agent.
+- Added filter for step `fetch-users` to filter on User Roles , example:
+  end-user, admin, agent.
 
 ## [1.3.0] - 2024-05-02
 
