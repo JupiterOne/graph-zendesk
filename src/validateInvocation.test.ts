@@ -33,6 +33,7 @@ it('auth error', async () => {
       zendeskAccessToken: 'INVALID',
       zendeskSubdomain: 'INVALID',
       omitTicketDescription: false,
+      userRoles: 'INVALID',
     },
   });
 

@@ -40,6 +40,7 @@ export function createUserEntity(user: User): Entity {
         updatedAt: user.updated_at,
         url: user.url,
         verified: user.verified,
+        notes: user.notes ? [user.notes!] : undefined,
       },
     },
   });

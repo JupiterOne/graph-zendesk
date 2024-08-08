@@ -8,6 +8,13 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [1.3.1] - 2024-07-22
+
+### Added
+
+- Added filter for step `fetch-users` to filter on User Roles , example:
+  end-user, admin, agent.
+
 ## [1.3.0] - 2024-05-02
 
 ### Added
