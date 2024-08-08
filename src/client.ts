@@ -58,23 +58,47 @@ export class APIClient {
     }
   }
 
-  async apiRequestWithPagination<T>(
+  public async apiRequestWithPagination<T>(
     path: string,
+    pageIteratee: PageIteratee<T>,
+  ): Promise<void> {
+    const urlModifier = (url: string) => url;
+    await this.apiRequestBase<T>(path, urlModifier, pageIteratee);
+  }
+
+  private async apiRequestWithRolesAndPagination<T>(
+    path: string,
+    userRoles: string,
+    pageIteratee: PageIteratee<T>,
+  ): Promise<void> {
+    const urlModifier = (url: string) => {
+      if (userRoles) {
+        const rolesArray = userRoles
+          .split(',')
+          .map((role) => `role[]=${role.trim()}`)
+          .join('&');
+        return `${url}?${rolesArray}`;
+      }
+      return url;
+    };
+    await this.apiRequestBase<T>(path, urlModifier, pageIteratee);
+  }
+
+  private async apiRequestBase<T>(
+    path: string,
+    urlModifier: (url: string) => string,
     pageIteratee: PageIteratee<T>,
   ): Promise<void> {
     try {
       let nextPageQueryString: string | null = null;
       do {
-        let response;
+        let url = urlModifier(`${path}.json`);
         if (nextPageQueryString) {
-          response = await this.apiRequestWithErrorHandling(
-            `${path}.json?${nextPageQueryString}`,
-          );
+          url += `&${nextPageQueryString}`;
         } else {
-          response = await this.apiRequestWithErrorHandling(
-            `${path}.json?page[size]=${this.paginateEntitiesPerPage}`,
-          );
+          url += `&page[size]=${this.paginateEntitiesPerPage}`;
         }
+        const response = await this.apiRequestWithErrorHandling(url);
         const resource = path.split('/')[1];
         if (response?.meta?.has_more) {
           nextPageQueryString = response?.links?.next?.split('?')[1];
@@ -115,12 +139,19 @@ export class APIClient {
    *
    * @param iteratee receives each resource to produce entities/relationships
    */
-  public async iterateUsers(iteratee: ResourceIteratee<User>): Promise<void> {
-    await this.apiRequestWithPagination<User>('/users', async (users) => {
-      for (const user of users) {
-        await iteratee(user);
-      }
-    });
+  public async iterateUsers(
+    iteratee: ResourceIteratee<User>,
+    userRoles: string,
+  ): Promise<void> {
+    await this.apiRequestWithRolesAndPagination<User>(
+      '/users',
+      userRoles,
+      async (users) => {
+        for (const user of users) {
+          await iteratee(user);
+        }
+      },
+    );
   }
 
   /**
