@@ -44,7 +44,7 @@ export interface IntegrationConfig extends IntegrationInstanceConfig {
   zendeskAccessToken: string;
   zendeskSubdomain: string;
   omitTicketDescription: boolean;
-  userRoles: string;
+  userRoles?: string;
 }
 
 export async function validateInvocation(
@@ -55,13 +55,6 @@ export async function validateInvocation(
   if (!config.zendeskAccessToken || !config.zendeskSubdomain) {
     throw new IntegrationValidationError(
       'Config requires all of {zendeskAccessToken, zendeskSubdomain}',
-    );
-  }
-
-  // Check if userRoles is provided
-  if (!config.userRoles) {
-    throw new IntegrationValidationError(
-      'Config requires userRoles to be specified',
     );
   }
 
