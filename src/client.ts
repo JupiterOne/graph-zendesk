@@ -68,7 +68,7 @@ export class APIClient {
 
   private async apiRequestWithRolesAndPagination<T>(
     path: string,
-    userRoles: string,
+    userRoles: string | undefined,
     pageIteratee: PageIteratee<T>,
   ): Promise<void> {
     const urlModifier = (url: string) => {
@@ -141,7 +141,7 @@ export class APIClient {
    */
   public async iterateUsers(
     iteratee: ResourceIteratee<User>,
-    userRoles: string,
+    userRoles: string | undefined,
   ): Promise<void> {
     await this.apiRequestWithRolesAndPagination<User>(
       '/users',
